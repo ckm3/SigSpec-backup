@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Correlograms</TITLE>
+<META NAME="description" CONTENT="Correlograms">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node33.html">
+<LINK REL="previous" HREF="node31.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node33.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html859"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html855"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html849"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html857"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html860"
+  HREF="node33.html">Time-resolved Analysis</A>
+<B> Up:</B> <A NAME="tex2html856"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html850"
+  HREF="node31.html">Preview</A>
+ &nbsp; <B>  <A NAME="tex2html858"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00290000000000000000"></A><A NAME="SIGSPEC_Correlograms"></A>
+<BR>
+Correlograms
+</H1><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> is able to compute correlograms of the time series for each stage of prewhitening. The correlogram files are named <TT>c#iteration#.dat</TT>. The calculation of correlograms is activated by the keyword <TT>correlograms</TT><A NAME="SIGSPEC_keyword.correlograms"></A>, which requires three integer parameters. The first parameter represents the maximum order to which to compute serial correlations, i.e.&nbsp;the limit of index lag for each correlogram. Setting it zero forces S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to adjust it to half the number of data points in the time series. The second parameter is the maximum number of iterations for which to compute correlograms. If the number of prewhitening iterations exceeds this value, then no correlogram is generated for the iterations after this limit. If a number <IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$\le 0$"> is given, then a correlogram is computed for each prewhitening stage. The third parameter has to be a positive number and defines a step width. If it is set <TT>1</TT>, a file is generated after each iteration, if it is set <TT>2</TT>, after every second iteration (starting with <TT>c000002.dat</TT>), and so on. The correlogram computation is switched off by default.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>A file <TT>rescorr.dat</TT> is generated, if the keyword <TT>correlograms</TT> is specified, no matter which parameter constellation is chosen.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>A correlogram file consists of two columns referring to
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI>index lag,
+</LI>
+<LI>serial correlation coefficient.
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>correlograms</TT> illustrates how correlograms are generated with S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> using the V photometry of IC4996#89 as time series input file <TT>correlograms.dat</TT>. The file <TT>correlograms.ini</TT> contains the line
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+correlograms 100 -1 1
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>which forces S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to evaluate correlograms with a maximum index lag of 100 (first parameter) for all iterations (negative value of second parameter). After each iteration, a correlogram is generated (third parameter). The output files
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+correlograms/c000000.dat
+correlograms/c000001.dat
+correlograms/c000002.dat
+correlograms/rescorr.dat
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>are generated as displayed in Fig.<A HREF="#SIGSPEC_correlograms.s"><I>18</I></A><I>.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_correlograms.s"></A><A NAME="3943"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>18</I>:</STRONG>
+Correlograms for the sample project <TT>correlograms</TT>. <EM>Solid:</EM> correlogram of the initial time series (file <TT>correlograms/c000000.dat</TT>). <EM>Dashed:</EM> correlogram after one prewhitening (file <TT>correlograms/c000001.dat</TT>). <EM>Dashed-dotted:</EM> correlogram after two prewhitenings (file <TT>correlograms/c000002.dat</TT>). <EM>Dotted:</EM> residual correlogram after three prewhitenings (file <TT>correlograms/rescorr.dat</TT>).</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="494" HEIGHT="178" ALIGN="BOTTOM" BORDER="0"
+ SRC="img100.png"
+ ALT="\includegraphics[clip,angle=0,width=109mm, clip]{eps/correlograms.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html859"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html855"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html849"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html857"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html860"
+  HREF="node33.html">Time-resolved Analysis</A>
+<B> Up:</B> <A NAME="tex2html856"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html850"
+  HREF="node31.html">Preview</A>
+ &nbsp; <B>  <A NAME="tex2html858"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

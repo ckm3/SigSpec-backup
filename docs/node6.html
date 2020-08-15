@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Projects</TITLE>
+<META NAME="description" CONTENT="Projects">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html538"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html534"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html528"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html536"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html539"
+  HREF="node7.html">Quiet mode</A>
+<B> Up:</B> <A NAME="tex2html535"
+  HREF="node5.html">How to Run SIGSPEC</A>
+<B> Previous:</B> <A NAME="tex2html529"
+  HREF="node5.html">How to Run SIGSPEC</A>
+ &nbsp; <B>  <A NAME="tex2html537"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00231000000000000000"></A><A NAME="SIGSPEC_Projects"></A>
+<BR>
+Projects
+</H2>
+<P>
+<I><I>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> is called by the command line
+</I></I>
+<P><I></I><PRE>
+SigSpec &lt;project&gt;
+</PRE><I></I>
+<P>
+<I><I>where <TT>&lt;project&gt;</TT> is the name (or path, if desired) of the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> project. Before running the program, the user has to provide
+</I></I>
+<OL>
+<LI>a directory <TT>&lt;project&gt;</TT> used for the output,
+</LI>
+<LI>a time series input file (see ``The time series input file'', p.<A HREF="node9.html#SIGSPEC_The_time_series_input_file"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</LI>
+</OL><I><I>
+The project directory and the time series input file have to be located in the same folder. The project directory need not be empty.
+</I></I>
+<P>
+<I><I>
+<BR>
+<BR>
+<B>Caution: S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> overwrites existing output files!</B>
+<BR>
+<BR>
+</I></I>
+<P>
+<I><I>There are two conventions for denominating input files.
+</I></I>
+<OL>
+<LI>The standard method is to pass only one time series input file to the program. S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> expects the file to be named <TT>&lt;project&gt;.dat</TT>.
+</LI>
+<LI>For an all-in-one analysis of multiple time series input files, i.e., for running S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> in MultiFile mode, a leading six-digit index is expected. In this case, the first file shall be named <TT>000000.&lt;project&gt;.dat</TT>, the next file is <TT>000001.&lt;project&gt;.dat</TT>, and so on. For more information on the MultiFile mode, please refer to ``MultiFile mode'', p.<A HREF="node36.html#SIGSPEC_MultiFile_Mode"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>.
+</LI>
+</OL>
+<P>
+<I><I>Furthermore, the user may pass a set of specifications to S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> by means of a file <TT>&lt;project&gt;.ini</TT> (see ``The <TT>.ini</TT> file'', p.<A HREF="node10.html#SIGSPEC_The_.ini_file"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). This file is expected in the same folder as the time series input file and the project directory. For specifications not given by the user, defaults are used.
+</I></I>
+<P>
+<I><I>
+<BR>
+<BR><B>Example.</B><A NAME="SIGSPEC_EXnormalrun"></A> <I>The sample project <TT>SigSpecNative</TT> provides a run without any additional options. The command line is <TT>SigSpec SigSpecNative</TT>. The sample input file <TT>SigSpecNative.dat</TT> (381 data points) represents V magnitudes of IC4996#89 (Zwintz et al.&nbsp;2004; Zwintz &amp; Weiss 2006).
+</I></I></I>
+<P>
+<I><I><I>The screen output produced by typing <TT>SigSpec SigSpecNative</TT> at runtime starts with a standard header.</I>
+</I></I>
+<P><I></I><PRE>
+ SSSSSS  ii          SSSSSS
+SS    SS            SS    SS
+SS       ii  gggg g SS       p pppp   eeeee   ccccc
+SS       ii gg   gg SS       pp   pp ee   ee cc   cc
+ SSSSSS  ii gg   gg  SSSSSS  pp   pp ee   ee cc
+      SS ii gg   gg       SS pp   pp eeeeeee cc
+      SS ii gg   gg       SS pp   pp ee      cc
+SS    SS ii gg   gg SS    SS pp   pp ee   ee cc   cc
+ SSSSSS  ii  gggggg  SSSSSS  pppppp   eeeee   ccccc
+                 gg          pp
+            gg   gg          pp
+             ggggg           pp
+
+
+SIGnificance SPECtrum
+Version 2.0
+************************************************************
+by Piet Reegen
+Institute of Astronomy
+University of Vienna
+Tuerkenschanzstrasse 17
+1180 Vienna, Austria
+Release date: August 18, 2009
+</PRE><I></I>
+<P>
+<I><I><I>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> processes the command line, checks whether a project directory <TT>SigSpecNative</TT> is present, and searches for a file <TT>SigSpecNative.ini</TT> (see ``The <TT>.ini</TT> file'', p.<A HREF="node10.html#SIGSPEC_The_.ini_file"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). Since there is no such file present, four warning messages are produced.</I>
+</I></I>
+<P><I></I><PRE>
+*** start **************************************************
+
+command line interface
+Checking availability of project directory SigSpecNative...
+project directory SigSpecNative ok.
+loading .ini file
+
+Warning: IniFile_SSCols 001
+         Failed to open .ini file.
+
+
+Warning: IniFile_WCols 001
+         Failed to open .ini file.
+
+
+Warning: IniFile_LoadIni 001
+         Failed to open .ini file.
+
+
+Warning: IniFile_Cind 001
+         Failed to open .ini file.
+</PRE><I></I>
+<P>
+<I><I><I>The next task is to load the input file <TT>SigSpecNative.dat</TT>. S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> provides the number of rows, the time interval width, and the standard deviation of the observable.</I>
+</I></I>
+<P><I></I><PRE>
+*** loading time series input file(s) **********************
+
+SigSpecNative.dat
+
+*** time series properties *********************************
+
+points 381, time base 9.17532, rms dev 0.00449592
+</PRE><I></I>
+<P>
+<I><I><I>The next section contains the specifications for the DFT and significance spectra to be calculated.</I>
+</I></I>
+<P><I></I><PRE>
+*** preparing to run SigSpec *******************************
+
+Rayleigh frequency resolution             0.1089880382935977
+oversampling ratio                       20.0000000000000000
+frequency spacing                         0.0054494019146799
+lower frequency limit                     0.0000000000000000
+upper frequency limit                   100.4651736990383739
+Nyquist coefficient                       0.5000000000000000
+number of frequencies                 18437
+</PRE><I></I>
+<P>
+<I><I><I>As S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> performs the prewhitening sequence, a list of detected signal components is displayed. The screen output contains the index of the identified component (a line number), the sig, the time-domain rms deviation before prewhitening the corresponding signal, and the csig. The last line contains an insignificant component that meets the breakup condition. In the present example, the default breakup condition (the sig to drop below 5) is applied, which is satisfied in the fourth iteration, where the maximum sig is 4.10802.</I>
+</I></I>
+<P>
+<I><I><A NAME="SIGSPEC_EXnormalrunfreqs"></A></I></I><I></I><PRE>
+*** running SigSpec ****************************************
+
+   1 freq 3.13205  sig 9.54539  rms 0.00449592  csig 9.54539
+   2 freq 3.98471  sig 7.43085  rms 0.00422861  csig 7.42753
+   3 freq 5.40684  sig 5.30164  rms 0.0040257  csig 5.2984
+   4 freq 17.3677  sig 4.13698  rms 0.00388775  csig 4.10802
+</PRE><I></I>
+<P>
+<I><I><I>On exit, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> displays a good-bye message.</I>
+</I></I>
+<P><I></I><PRE>
+Finished.
+
+************************************************************
+
+Thank you for using SigSpec!
+Questions or comments?
+Please contact Piet Reegen (reegen@astro.univie.ac.at)
+Bye!
+</PRE><I></I>
+<P>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_normalrun.dat"></A><A NAME="3778"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>1</I>:</STRONG>
+<EM>Black circles:</EM> light curve for the sample project <TT>SigSpecNative</TT>. <EM>Line:</EM> fit formed by three significant signal components (as listed in the file <TT>SigSpecNative/result.dat</TT>). <EM>Grey dots:</EM> residuals after prewhitening of three significant signal components (file <TT>SigSpecNative/residuals.dat</TT>).</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="384" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/normalrun.dat.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<P>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_normalrun.s"></A><A NAME="3789"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>2</I>:</STRONG>
+<EM>Grey:</EM> Fourier spectra for the sample project <TT>SigSpecNative</TT>. <EM>Left:</EM> significance spectra. <EM>Right:</EM> DFT amplitudes. <EM>Top:</EM> original spectra, without prewhitening (file <TT>SigSpecNative/s000000.dat</TT>). <EM>Bottom:</EM> residual spectra, with three significant signal components prewhitened (file <TT>SigSpecNative/resspec.dat</TT>). In the top panels, the significant components are indicated by <EM>dots</EM> with dashed drop lines (file <TT>SigSpecNative/result.dat</TT>). The default sig threshold of 5 is represented by a horizontal <EM>dashed line</EM> in the left panels.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="384" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/normalrun.s.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<P>
+<I><I><I>If no special output is selected in a file <TT>SigSpecNative.ini</TT>, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> produces the following output files in the project directory <TT>SigSpecNative</TT>:
+</I></I></I>
+<UL>
+<LI><TT>s000000.dat</TT>: DFT and significance spectrum of the original time series (without any prewhitening),
+</LI>
+<LI><TT>result.dat</TT>: list of significant signal components detected in the time series,
+</LI>
+<LI><TT>residuals.dat</TT>: residual time series after prewhitening all significant signal components listed in <TT>result.dat</TT>,
+</LI>
+<LI><TT>resspec.dat</TT>: DFT and significance spectrum of the residual time series <TT>residuals.dat</TT>.
+</LI>
+</UL><I><I>
+<I>Fig.<A HREF="#SIGSPEC_normalrun.dat"><I>1</I></A></I> <I>contains the sample input <TT>SigSpecNative.dat</TT>, the multisine fit to the time series according to the list of significant signal components in <TT>SigSpecNative/result.dat</TT>, and the residuals after subtracting the fit from the input time series (file <TT>SigSpecNative/residuals.dat</TT>). Fig.<A HREF="#SIGSPEC_normalrun.s"><I>2</I></A></I> <I>refers to the frequency domain: the DFT spectrum of the initial time series <TT>SigSpecNative/s000000.dat</TT>, the three significant signal components contained in <TT>SigSpecNative/result.dat</TT>, and the residual spectrum in the file <TT>SigSpecNative/resspec.dat</TT>. For detailed information on the contents of the output files, please refer to ``Default Output'', p.<A HREF="node19.html#SIGSPEC_Default_Output"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>.</I>
+</I></I>
+<P>
+<I><I>
+<BR>
+<BR>
+Furthermore, the user may pass a set of specifications to S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> in a file <TT>&lt;project&gt;.ini</TT> (see ``The <TT>.ini</TT> file'', p.<A HREF="node10.html#SIGSPEC_The_.ini_file"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). For specifications not given by the user, defaults are used.
+</I></I>
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html538"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html534"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html528"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html536"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html539"
+  HREF="node7.html">Quiet mode</A>
+<B> Up:</B> <A NAME="tex2html535"
+  HREF="node5.html">How to Run SIGSPEC</A>
+<B> Previous:</B> <A NAME="tex2html529"
+  HREF="node5.html">How to Run SIGSPEC</A>
+ &nbsp; <B>  <A NAME="tex2html537"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

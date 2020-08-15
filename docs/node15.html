@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Upper frequency limit and Nyquist Coefficient</TITLE>
+<META NAME="description" CONTENT="Upper frequency limit and Nyquist Coefficient">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html654"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html650"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html644"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html652"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html655"
+  HREF="node16.html">Frequency spacing and oversampling</A>
+<B> Up:</B> <A NAME="tex2html651"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html645"
+  HREF="node14.html">Lower frequency limit</A>
+ &nbsp; <B>  <A NAME="tex2html653"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00247000000000000000"></A><A NAME="SIGSPEC_Upper_frequency_limit_and_Nyquist_Coefficient"></A>
+<BR>
+Upper frequency limit and Nyquist Coefficient
+</H2><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I>The keyword <TT>ufreq</TT><A NAME="SIGSPEC_keyword.ufreq"></A> allows to determine the upper limit of the frequency interval to be considered. 
+</I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I>An alternative method is the automatic determination of this limit by means of the Nyquist Coefficient (keyword <TT>nycoef</TT><A NAME="SIGSPEC_keyword.nycoef"></A>). For equidistantly sampled time series with sampling interval width <IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img59.png"
+ ALT="$\delta t$">, there is a uniquely defined <I>Nyquist Frequency</I>
+</I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+f_\nu := \frac{1}{2\,\delta t}\, .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="73" HEIGHT="38" BORDER="0"
+ SRC="img60.png"
+ ALT="\begin{displaymath}
+f_\nu := \frac{1}{2\,\delta t}\, .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I>
+In case of non-equidistant sampling, each sampling interval between two consecutive time values may be considered to produce its individual Nyquist Frequency, whence this limit is ambiguous. In this case, the Nyquist Coefficient for an arbitrarily given frequency is introduced as the fraction of sampling intervals in the time domain the individual Nyquist Frequency of which is higher than the frequency under consideration. This provides to select an upper frequency limit by specifying a minimum Nyquist Coefficient. E.g., specifying a Nyquist Coefficient of 0.5 (which is the default value) guarantees that at least half of the information contained by the spectrum in the considered frequency range is below the Nyquist limit.
+</I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I>Additional information is available by setting the keyword <TT>nyscan</TT><A NAME="SIGSPEC_keyword.nyscan"></A> in the <TT>.ini</TT> file. If this keyword is specified, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> creates a file <TT>nyscan.dat</TT> in the project directory containing the Nyquist Coefficients over the specified frequency range.
+</I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>limits</TT> illustrates the use of the keyword <TT>ufreq</TT>. The line
+</I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I></I><I></I><PRE>
+ufreq 5
+</PRE><I></I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I>in the file <TT>limits.ini</TT> restricts all computations performed by S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to frequencies below 5 cycles per day. The spectrum <TT>limits/s000000.dat</TT> (sig and amplitude) is displayed in Fig.<A HREF="node14.html#SIGSPEC_limits.s"><I>7</I></A><I>. A comparison with the screen output in Example <TT>SigSpecNative</TT>, p.<A HREF="node6.html#SIGSPEC_EXnormalrunfreqs"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, where no restrictions to the frequency range apply, shows that the screen output in this example contains one line less:
+</I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I></I><PRE>
+   1 freq 3.13205  sig 9.54539  rms 0.00449592  csig 9.54539
+   2 freq 3.98471  sig 7.43085  rms 0.00422861  csig 7.42753
+   3 freq 2.664  sig 4.60182  rms 0.0040257  csig 4.60117
+</PRE><I></I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I>The signal component at 5.4 cycles per day is not detected, because it is outside the specified frequency range.</I></I>
+</I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>nyos</TT> illustrates the use of the keywords <TT>nycoef</TT> and <TT>nyscan</TT> for the V photometry of IC4996#89. The line
+</I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I></I><I></I><PRE>
+nycoef 0.99
+</PRE><I></I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I>in the file <TT>nyos.ini</TT> provides an upper frequency limit of 110.77 cycles per day. The keyword <TT>nyscan</TT> is given, and the file <TT>nyos/nyscan.dat</TT> contains the Nyquist Coefficients for frequencies from 0 to 110.77 cycles per day, as displayed in Fig.<A HREF="#SIGSPEC_nyscan.s"><I>8</I></A>.</I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_nyscan.s"></A><A NAME="3860"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>8</I>:</STRONG>
+The file <TT>nyos/nyscan.dat</TT> contains the Nyquist coefficients depending on frequency for the sample project <TT>nyos</TT>.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="179" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/nyscan.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html654"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html650"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html644"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html652"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html655"
+  HREF="node16.html">Frequency spacing and oversampling</A>
+<B> Up:</B> <A NAME="tex2html651"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html645"
+  HREF="node14.html">Lower frequency limit</A>
+ &nbsp; <B>  <A NAME="tex2html653"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

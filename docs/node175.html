@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Equivalent sig</TITLE>
+<META NAME="description" CONTENT="Equivalent sig">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node176.html">
+<LINK REL="previous" HREF="node174.html">
+<LINK REL="up" HREF="node171.html">
+<LINK REL="next" HREF="node176.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2730"
+  HREF="node176.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2726"
+  HREF="node171.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2720"
+  HREF="node174.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2728"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2731"
+  HREF="node176.html">Reliability and sensitivity</A>
+<B> Up:</B> <A NAME="tex2html2727"
+  HREF="node171.html">How COMBINE Works</A>
+<B> Previous:</B> <A NAME="tex2html2721"
+  HREF="node174.html">Limit of harmonic order</A>
+ &nbsp; <B>  <A NAME="tex2html2729"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00444000000000000000"></A><A NAME="COMBINE_Equivalent_sig"></A>
+<BR>
+Equivalent sig
+</H2>
+<P>
+<I><I>Each linear combination is assigned an equivalent sig,
+</I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mathrm{sig}_{\mathrm{eq}}:=\min\left(\left|c_{k}\right|^{-\delta_{k}}\mathrm{sig}_{k}\right)-\chi \log K\: ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="COMBINE_EQ_sigeq"></A><IMG
+ WIDTH="259" HEIGHT="34" BORDER="0"
+ SRC="img252.png"
+ ALT="\begin{displaymath}
+\mathrm{sig}_{\mathrm{eq}}:=\min\left(\left\vert c_{k}\right\vert^{-\delta_{k}}\mathrm{sig}_{k}\right)-\chi \log K\: ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(39)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I>
+where <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img253.png"
+ ALT="$\delta_{k}$"> denotes the decay parameter provided by the keyword <TT>decay</TT><A NAME="COMBINE_keyword.decay"></A>, and <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\chi $"> is the combination damping, specified using the keyword <TT>cdamp</TT><A NAME="COMBINE_keyword.cdamp"></A>. Both keywords are followed by floating-point numbers. The default values for both parameters are <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$1$">.
+</I></I>
+<P>
+<DIV ALIGN="CENTER"><A NAME="COMBINE_decay"></A><A NAME="4210"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>1</I>:</STRONG>
+Ratio of equivalent sig over sig of an individual signal component vs.&nbsp;polynomial coefficient <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$c_k$"> associated to the signal component. Five graphs for different values of the decay parameter <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$\delta _k$"> are presented.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="386" ALIGN="BOTTOM" BORDER="0"
+ SRC="img254.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/COMB_decay.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<P>
+<I><I>Fig.<A HREF="#COMBINE_decay"><I>1</I></A> displays the relative sig correction with increasing coefficient <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$c_k$"> for five different values of the decay parameter <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$\delta _k$">. Fig.<A HREF="#COMBINE_cdamp"><I>2</I></A> illustrates the correction of equivalent sig with increasing number of components contributing to a linear combination <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="$K$"> for five different values of the combination damping <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\chi $">. 
+</I></I>
+<P>
+<DIV ALIGN="CENTER"><A NAME="COMBINE_cdamp"></A><A NAME="4215"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>2</I>:</STRONG>
+Additive significance correction for a linear combination employing <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="$K$"> different signal components. Five graphs for different values of the combination damping <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\chi $"> are presented.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="385" ALIGN="BOTTOM" BORDER="0"
+ SRC="img255.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/COMB_cdamp.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2730"
+  HREF="node176.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2726"
+  HREF="node171.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2720"
+  HREF="node174.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2728"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2731"
+  HREF="node176.html">Reliability and sensitivity</A>
+<B> Up:</B> <A NAME="tex2html2727"
+  HREF="node171.html">How COMBINE Works</A>
+<B> Previous:</B> <A NAME="tex2html2721"
+  HREF="node174.html">Limit of harmonic order</A>
+ &nbsp; <B>  <A NAME="tex2html2729"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

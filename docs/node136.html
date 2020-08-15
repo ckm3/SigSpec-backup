@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Indexing</TITLE>
+<META NAME="description" CONTENT="Indexing">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node137.html">
+<LINK REL="previous" HREF="node132.html">
+<LINK REL="up" HREF="node128.html">
+<LINK REL="next" HREF="node137.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2222"
+  HREF="node137.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2218"
+  HREF="node128.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2212"
+  HREF="node135.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2220"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2223"
+  HREF="node137.html">Dataset Types</A>
+<B> Up:</B> <A NAME="tex2html2219"
+  HREF="node128.html">Cinderella User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2213"
+  HREF="node135.html">The .cnd file</A>
+ &nbsp; <B>  <A NAME="tex2html2221"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00350000000000000000"></A><A NAME="CINDERELLA_Indexing"></A>
+<BR>
+Indexing
+</H1>
+<P>
+<I><I>By default, C<SMALL>INDERELLA</SMALL> expects the file index of time series and S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> results to start at zero. If the user wants the program to start at a different index, the keyword <TT>mfstart</TT> may be given in the <TT>.cnd</TT> file. This keyword is followed by an integer representing the desired start index. Furthermore, the software takes into account as many files with consecutive indices as available. The number of indices to process may be restricted by means of the keyword <TT>multifile</TT>, followed by an integer representing the last index to take into account. The use of the keywords <TT>mfstart</TT> and <TT>multifile</TT> is strictly consistent with the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> conventions (S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> manual, p.<A HREF="node36.html#SIGSPEC_MultiFile_Mode"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</I></I>
+<P>
+<I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>index</TT> contains the same input as the project <TT>CinderellaNative</TT> (p.<A HREF="node134.html#CINDERELLA_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), but both the time series input files and the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result files are now enumerated from <TT>004847</TT> to <TT>004855</TT> rather than from <TT>000000</TT> to <TT>000008</TT>. The file <TT>index.cnd</TT> consists of a single line,
+</I></I></I>
+<P>
+<I></I><PRE>
+mfstart 4847
+</PRE><I></I>
+<P>
+<I><I><I>Since the keyword <TT>multifile</TT> is not specified in the file <TT>index.cnd</TT>, C<SMALL>INDERELLA</SMALL> uses all input files available through consecutive indices.
+</I></I></I>
+<P>
+<I><I><I>The computations are entirely the same as for <TT>CinderellaNative</TT>, but all indices are consistently incorporated by C<SMALL>INDERELLA</SMALL>. E.g., the screen output for the single-comparison computations is now:
+</I></I></I>
+<P>
+<I></I><PRE>
+*** pairwise Cinderella analysis ***************************
+
+  4848 vs.   4847: conditional sig
+  4849 vs.   4847: conditional sig
+  4850 vs.   4847: conditional sig
+  4851 vs.   4847: conditional sig
+  4852 vs.   4847: conditional sig
+  4853 vs.   4847: conditional sig
+  4854 vs.   4847: conditional sig
+  4855 vs.   4847: conditional sig
+</PRE><I></I><I></I>
+<P>
+<I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2222"
+  HREF="node137.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2218"
+  HREF="node128.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2212"
+  HREF="node135.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2220"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2223"
+  HREF="node137.html">Dataset Types</A>
+<B> Up:</B> <A NAME="tex2html2219"
+  HREF="node128.html">Cinderella User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2213"
+  HREF="node135.html">The .cnd file</A>
+ &nbsp; <B>  <A NAME="tex2html2221"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

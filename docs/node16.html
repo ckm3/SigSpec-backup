@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Frequency spacing and oversampling ratio</TITLE>
+<META NAME="description" CONTENT="Frequency spacing and oversampling ratio">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html666"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html662"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html656"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html664"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html667"
+  HREF="node17.html">Accuracy of MultiSine fits</A>
+<B> Up:</B> <A NAME="tex2html663"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html657"
+  HREF="node15.html">Upper frequency limit and</A>
+ &nbsp; <B>  <A NAME="tex2html665"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00248000000000000000">
+Frequency spacing and oversampling ratio</A>
+</H2><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I>The width of the interval between consecutive frequencies may be specified by the keyword <TT>freqspacing</TT><A NAME="SIGSPEC_keyword.freqspacing"></A>.
+</I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I>An alternative method is the automatic determination of the spacing by means of the oversampling ratio. In case of equidistantly sampled time series, the frequency spacing is defined by
+</I></I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\delta f := \frac{1}{T}\, ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="64" HEIGHT="38" BORDER="0"
+ SRC="img62.png"
+ ALT="\begin{displaymath}
+\delta f := \frac{1}{T}\, ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I><I>
+where <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$T$"> denotes the width of the total time interval. For non-equidistant time series, it is advisable to use a denser frequency sampling,
+</I></I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\delta f := \frac{1}{\Omega T}\, ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="76" HEIGHT="38" BORDER="0"
+ SRC="img64.png"
+ ALT="\begin{displaymath}
+\delta f := \frac{1}{\Omega T}\, ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I><I>
+where <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.png"
+ ALT="$\Omega$"> is the oversampling ratio. This quantity may be specified using the keyword <TT>osratio</TT><A NAME="SIGSPEC_keyword.osratio"></A>. The default value is 20, which is - in most cases - sufficient for practical use.
+</I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>limits</TT> illustrates the use of the keyword <TT>freqspacing</TT>, an example for the keyword <TT>osratio</TT> is provided in the sample project <TT>nyos</TT>. Both samples use the V photometry of IC4996#89 as input time series. The line
+</I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+freqspacing 0.001
+</PRE><I></I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I>in the file <TT>limits.ini</TT> forces S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to calculate Fourier amplitudes and sigs for every 0.001 cycles per day. In the file <TT>nyos.ini</TT>, there is a line
+</I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+osratio 12
+</PRE><I></I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I>which overrides the default oversampling ratio of 20. Fig.<A HREF="#SIGSPEC_os.s"><I>9</I></A> <I>compares the standard spacing from Example <TT>SigSpecNative</TT>, p.<A HREF="node6.html#SIGSPEC_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), with the spacings obtained applying the two above modifications.</I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I></I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_os.s"></A><A NAME="3867"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>9</I>:</STRONG>
+Close-up for the significance spectra generated by the projects <TT>SigSpecNative</TT>, <TT>limits</TT> and <TT>nyos</TT> around the main peak for the V photometry of IC4996#89. Different settings for frequency spacing and oversampling ratio are applied.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="498" HEIGHT="179" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/os.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html666"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html662"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html656"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html664"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html667"
+  HREF="node17.html">Accuracy of MultiSine fits</A>
+<B> Up:</B> <A NAME="tex2html663"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html657"
+  HREF="node15.html">Upper frequency limit and</A>
+ &nbsp; <B>  <A NAME="tex2html665"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

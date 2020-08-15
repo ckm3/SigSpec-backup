@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Lower frequency limit</TITLE>
+<META NAME="description" CONTENT="Lower frequency limit">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html642"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html638"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html632"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html640"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html643"
+  HREF="node15.html">Upper frequency limit and</A>
+<B> Up:</B> <A NAME="tex2html639"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html633"
+  HREF="node13.html">Time series columns containing</A>
+ &nbsp; <B>  <A NAME="tex2html641"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00246000000000000000">
+Lower frequency limit</A>
+</H2><I><I><I></I>
+<P>
+<I><I><I><I><I><I>The frequency where the computation of spectra starts is specified by the keyword <TT>lfreq</TT><A NAME="SIGSPEC_keyword.lfreq"></A>. By default, the lower frequency limit is zero.
+</I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>limits</TT> illustrates the use of the keyword <TT>lfreq</TT>. It uses the V photometry of IC4996#89 as input file <TT>limits.dat</TT>, and the file <TT>limits.ini</TT> contains the line
+</I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I></I><PRE>
+lfreq 1
+</PRE><I></I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I>which forces S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to perform all computations for frequencies <IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$\ge$"> 1 cycle per day. The spectrum <TT>limits/s000000.dat</TT> is displayed in Fig.<A HREF="#SIGSPEC_limits.s"><I>7</I></A><I>.</I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_limits.s"></A><A NAME="3846"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>7</I>:</STRONG>
+<EM>Grey:</EM> Fourier spectra for the sample project <TT>limits</TT>. <EM>Left:</EM> significance spectrum. <EM>Right:</EM> DFT amplitudes. The significant components are indicated by <EM>dots</EM> with dashed drop lines (file <TT>limits/result.dat</TT>). The default sig threshold of 5 is represented by a horizontal <EM>dashed line</EM> in the left panel. The frequency range is set from 1 to 5 cycles per day using the keywords <TT>lfreq</TT> and <TT>ufreq</TT>.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="182" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/limits.s.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I>
+<BR><HR>
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

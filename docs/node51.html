@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Changing sig in a prewhitening sequence</TITLE>
+<META NAME="description" CONTENT="Changing sig in a prewhitening sequence">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node52.html">
+<LINK REL="previous" HREF="node50.html">
+<LINK REL="up" HREF="node50.html">
+<LINK REL="next" HREF="node52.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1098"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1094"
+  HREF="node50.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1088"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1096"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1099"
+  HREF="node52.html">The effect of binning</A>
+<B> Up:</B> <A NAME="tex2html1095"
+  HREF="node50.html">Frequently Asked Questions</A>
+<B> Previous:</B> <A NAME="tex2html1089"
+  HREF="node50.html">Frequently Asked Questions</A>
+ &nbsp; <B>  <A NAME="tex2html1097"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION002161000000000000000">
+Changing sig in a prewhitening sequence</A>
+</H2><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><B>Given a time series showing two different peaks in the power spectrum, prewhitening of the dominant signal usually does not cause a major change in the height of the secondary peak in the spectrum of the residuals. Why does the corresponding sig change?</B>
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_change.s"></A><A NAME="4114"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+Sig (<EM>left</EM>) and power (squared amplitude) spectra (<EM>right</EM>) of a synthetic time series containing two signals plus noise. The sampling represents the V photometry of IC4996#89. The original spectra are plotted in <EM>black</EM> colour. The <EM>grey</EM> graphs refer to the spectra after subtracting the dominant signal (<!-- MATH
+ $f = 4.68573\,\mathrm{d}^{-1}$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img186.png"
+ ALT="$f = 4.68573\,\mathrm{d}^{-1}$">).</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="498" HEIGHT="182" ALIGN="BOTTOM" BORDER="0"
+ SRC="img187.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/change.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The situation is illustrated in Fig.<A HREF="#SIGSPEC_change.s"><I>39</I></A> displaying the sig (<EM>left</EM> panel) and power (<EM>right</EM> panel) spectra (in this sample just squared amplitude) generated by a synthetic time series. It consists of two sinusoidal signals, <!-- MATH
+ $f_1 = 4.68573\,\mathrm{d}^{-1}$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img188.png"
+ ALT="$f_1 = 4.68573\,\mathrm{d}^{-1}$">, <IMG
+ WIDTH="73" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img189.png"
+ ALT="$A_1 = 7.27$">, and <!-- MATH
+ $f_2 = 5.26934\,\mathrm{d}^{-1}$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img190.png"
+ ALT="$f_2 = 5.26934\,\mathrm{d}^{-1}$">, <IMG
+ WIDTH="73" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img191.png"
+ ALT="$A_2 = 3.31$">, plus noise with unit rms error. The plots contain a comparison of the initial spectra (<EM>gray</EM>) and the spectra after subtraction of the first signal component. In the right panel, the power associated to the peak at <!-- MATH
+ $5.27\,\mathrm{d}^{-1}$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$5.27\,\mathrm{d}^{-1}$"> differs only slightly between the two iterations, whereas the corresponding sig in the left panel increases dramatically in the second iteration.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The reason for this behaviour is that the sig refers to the probability of a random time series with the same rms error as the given one to produce a peak like the given one. In the first iteration, the sig calculation is based on the initial time series (rms error <IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img193.png"
+ ALT="$5.84$">), and in the second iteration, it relies on the residual time series after prewhitening of the peak at <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img194.png"
+ ALT="$f_1$">, the rms error of which is <IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img195.png"
+ ALT="$2.46$">. The ratio of rms errors (<IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img196.png"
+ ALT="$\approx 2.4$">) is in agreement with the root ratio of sigs at <IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img197.png"
+ ALT="$f_2$"> in the two iterations (<IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img198.png"
+ ALT="$\approx 2.2$">).
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>This effect is more prominent for high sigs, because in this case prewhitening causes a major change in the statistical properties of the time series. If a peak with a low sig is prewhitened, the time series is affected marginally, and correspondingly, the sigs of other signals do not change much.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1098"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1094"
+  HREF="node50.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1088"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1096"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1099"
+  HREF="node52.html">The effect of binning</A>
+<B> Up:</B> <A NAME="tex2html1095"
+  HREF="node50.html">Frequently Asked Questions</A>
+<B> Previous:</B> <A NAME="tex2html1089"
+  HREF="node50.html">Frequently Asked Questions</A>
+ &nbsp; <B>  <A NAME="tex2html1097"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

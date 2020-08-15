@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>What is SIGSPEC?</TITLE>
+<META NAME="description" CONTENT="What is SIGSPEC?">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html512"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html508"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html502"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html510"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html513"
+  HREF="node5.html">How to Run SIGSPEC</A>
+<B> Up:</B> <A NAME="tex2html509"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html503"
+  HREF="node3.html">Abstract</A>
+ &nbsp; <B>  <A NAME="tex2html511"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00220000000000000000">
+What is S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL>?</A>
+</H1>
+<P>
+<I><I>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> (abbreviation of `<B>SIG</B>nificance <B>SPEC</B>trum') is a program that computes a significance spectrum for a time series. It evaluates the <I>Probability Density Function (PDF)</I> of a given DFT amplitude level analytically, making use of the theoretical concept introduced by Reegen&nbsp;(2005, 2007). The <I>False-Alarm Probability</I>, <!-- MATH
+ $\Phi_\mathrm{FA}\left( A\right)$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$\Phi_\mathrm{FA}\left( A\right)$">, is the probability that an amplitude in the DFT spectrum exceeds a given limit <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$A$">, and is obtained through integration of the PDF (e.g.&nbsp;Scargle 1982). Instead of this frequently used quantity, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> calculates the <I>spectral significance</I> (abbreviated by `sig') of an amplitude <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$A$"> by
+</I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mathrm{sig}\left( A\right) := -\log\left[ \Phi_\mathrm{FA}\left( A\right)\right]\, .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="182" HEIGHT="28" BORDER="0"
+ SRC="img29.png"
+ ALT="\begin{displaymath}
+\mathrm{sig}\left( A\right) := -\log\left[ \Phi_\mathrm{FA}\left( A\right)\right]\, .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<P>
+<I><I>E.g., a sig equal to <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$5$"> indicates that the considered amplitude level is due to noise in one out of <IMG
+ WIDTH="27" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$10^5$"> cases. This value is used as the default threshold for the termination of the prewhitening sequence.
+</I></I>
+<P>
+<I><I>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> performs an iterative process consisting of four steps<A NAME="tex2html1"
+  HREF="footnode.html#foot3572"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>:
+</I></I>
+<OL>
+<LI>computation of the significance spectrum,
+</LI>
+<LI>exact determination of the peak with maximum sig,
+</LI>
+<LI>a MultiSine least-squares fit of the frequencies, amplitudes and phases of all significant signal components detected so far,
+</LI>
+<LI>prewhitening of the sinusoidal components. The residuals are used as input for the next iteration.
+</LI>
+</OL>
+<P>
+<I><I>If S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> is called without any special settings, it produces four files:
+</I></I>
+<OL>
+<LI>the DFT amplitude spectrum <TT>s000000.dat</TT> of the original time series, containing also sig and phase,
+</LI>
+<LI>the DFT amplitude spectrum <TT>resspec.dat</TT> of the residual time series after prewhitening all significant signal components, containing also sig and phase,
+</LI>
+<LI>the residual time series <TT>residuals.dat</TT> after prewhitening all significant signal components,
+</LI>
+<LI>a result file called <TT>result.dat</TT>, which contains a list of significant signal components,
+</LI>
+<LI>MultiSine track files, each of which contains a list of the frequencies, amplitudes and phases for a single sinusoidal component through the prewhitening cascade (pp.<A HREF="node29.html#SIGSPEC_MultiSine_tracks"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, <A HREF="node78.html#SIGSPEC_mstracks"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</LI>
+</OL><I><I>
+Further options may be applied to obtain spectra, residuals, and/or result files (p.<A HREF="node114.html#SIGSPEC_spectra"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>) in the prewhitening sequence. The MultiSine fits, which are performed after each prewhitening step, modify the frequencies, amplitudes and phases of previous components. If the user examines the resulting signal components and decides not to use all of them, the additional result files help to have accurate frequencies, amplitudes and phases in hands also for a shorter list of significant sinusoids without re-running the program.
+</I></I>
+<P>
+<I><I>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> can produce additional files containing
+</I></I>
+<OL>
+<LI>a spectral window for the given time series (pp.<A HREF="node24.html#SIGSPEC_Spectral_window"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, <A HREF="node126.html#SIGSPEC_win"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>),
+</LI>
+<LI>a sampling profile (pp.<A HREF="node25.html#SIGSPEC_Sampling_profile"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, <A HREF="node92.html#SIGSPEC_profile"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>) containing the parameters <!-- MATH
+ $\alpha _0\left(\omega\right)$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$\alpha _0\left(\omega\right)$">, <!-- MATH
+ $\beta _0\left(\omega\right)$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$\beta _0\left(\omega\right)$">, <!-- MATH
+ $\theta _0\left(\omega\right)$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$\theta _0\left(\omega\right)$"> determining the dependency of the sig on the time-domain sampling, as well as on frequency and phase in Fourier space (see Reegen 2007),
+</LI>
+<LI>a preview of the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> analysis (pp.<A HREF="node31.html#SIGSPEC_Preview"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, <A HREF="node91.html#SIGSPEC_preview"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>),
+</LI>
+<LI>a Sock Diagram (pp.<A HREF="node26.html#SIGSPEC_Sock_Diagram"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, <A HREF="node113.html#SIGSPEC_sock:phases"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>),
+</LI>
+<LI>a Phase Distribution Diagram (pp.<A HREF="node27.html#SIGSPEC_Phase_Distribution_Diagram"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, <A HREF="node90.html#SIGSPEC_phdist:phases"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>) containing probability densities for the Fourier phases,
+</LI>
+<LI>a correlogram for each step of the prewhitening sequence (pp.<A HREF="node32.html#SIGSPEC_Correlograms"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, <A HREF="node65.html#SIGSPEC_correlograms"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</LI>
+</OL><I><I>
+These options are deactivated by default.
+</I></I>
+<P>
+<I><I><A NAME="SIGSPEC_csig"></A>Given a sequence of prewhitenings yielding <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$N$"> significant components with associated sigs <!-- MATH
+ $\mathrm{sig}\left( A_n\right)$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\mathrm{sig}\left( A_n\right)$">, it is desirable to additionally know the probability of the entire sequence to be valid. This means that not a single erroneous component is allowed. The False-Alarm Probability <!-- MATH
+ $\Phi _{\mathrm{FA}\,n} = 10^{-\mathrm{sig}\left( A_n\right)}$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$\Phi _{\mathrm{FA}\,n} = 10^{-\mathrm{sig}\left( A_n\right)}$"> of an individual peak is the probability that it is generated by noise. The complementary probability that the considered peak is true is <!-- MATH
+ $1 - 10^{-\mathrm{sig}\left( A_n\right)}$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$1 - 10^{-\mathrm{sig}\left( A_n\right)}$">. If the individual components are statistically independent, the cumulative probability of all components to be real is the product of the individual probabilities,
+</I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+1 - \Phi _{\mathrm{FA}} = \prod _{n=1}^N\left(1 - \Phi _{\mathrm{FA}\,n}\right)\: .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="191" HEIGHT="56" BORDER="0"
+ SRC="img38.png"
+ ALT="\begin{displaymath}
+1 - \Phi _{\mathrm{FA}} = \prod _{n=1}^N\left(1 - \Phi _{\mathrm{FA}\,n}\right)\: .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I>
+Consistently, the cumulative sig is introduced as the negative logarithm of this total False-Alarm Probability for all identified signal components, <!-- MATH
+ $\Phi _{\mathrm{FA}}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$\Phi _{\mathrm{FA}}$">, and in terms of individual sigs, one obtains
+</I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mathrm{csig}\left( A_N\right) := - \log\left\lbrace 1 - \prod _{n=1}^N\left[ 1 - 10^{-\mathrm{sig}\left( A_n\right)}\right]\right\rbrace\: .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="329" HEIGHT="56" BORDER="0"
+ SRC="img40.png"
+ ALT="\begin{displaymath}
+\mathrm{csig}\left( A_N\right) := - \log\left\lbrace 1 - \pr...
+... - 10^{-\mathrm{sig}\left( A_n\right)}\right]\right\rbrace\: .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<P>
+<I><I>In consistency with the definition of the sig associated with an amplitude in the DFT spectrum, a cumulative sig of <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.png"
+ ALT="$3$"> means that the prewhitening cascade is entirely true in <IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$999$"> out of <IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$1\,000$"> cases. Or - in other words - in one out of <IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$1\,000$"> cases, at least one of the identified components is generated by noise.
+</I></I>
+<P>
+<I><I>Whereas the individual sig of a component in the prewhitening sequence may exceed that of the previously identified maximum, the cumulative sig is a monotone sequence uniquely decreasing with each additional signal component.
+</I></I>
+<P>
+<I><I>The prewhitening loop stops, if no sig level above a pre-defined limit is found. As described in ``Program termination'', p.<A HREF="node18.html#SIGSPEC_Program_termination"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, there are three different criteria that may be applied to determine the conditions for program termination:
+</I></I>
+<OL>
+<LI>the number of iterations in the prewhitening sequence,
+</LI>
+<LI>a lower sig limit for the highest peak in the significance spectrum,
+</LI>
+<LI>a threshold for the cumulative sig related to a combined probability for all detected frequency components.
+</LI>
+</OL>
+<P>
+<I><I>The program also supports the subdivision of a time series into a set of intervals and the separate analysis of all these parts in order to monitor frequency changes of signal components with time. This method will be called <I>time-resolved analysis</I>. In this case, the output is somewhat richer, as described in ``Time-resolved Analysis'' (p.<A HREF="node33.html#SIGSPEC_Time-resolved_Analysis"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</I></I>
+<P>
+<I><I>An immanent problem in the analysis of non-equidistantly sampled time series is <EM>aliasing</EM>. Due to periodic gaps in the data set, a peak in the amplitude spectrum is accompanied by side peaks. Especially if more than one sinusoidal component is present in the data, the superposition of side peaks may produce a maximum amplitude in the DFT spectrum at a frequency that has nothing in common with the true signal frequencies. Such a misidentification usually damages the complete prewhitening sequence from this point on. As pointed out by Reegen&nbsp;(2007), S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> appears less prone to aliasing than the previously used methods, since the noise component is employed into the statistical treatment correctly. However, the superposition mentioned above may also lead to erroneous identifications.
+</I></I>
+<P>
+<I><I>In order to overcome this potential weakness, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> supports the simultaneous calculation of more than one signal component simultaneously. Instead of picking only the peak associated to maximum sig, a whole set of highest peaks is examined, searching all possible combinations for several iterations in order to obtain the solution providing a minimum rms residual. This function is called <EM>AntiAlC</EM> (ANTI-ALiasing Correction) mode (p.<A HREF="node34.html#SIGSPEC_AntiAlC"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</I></I>
+<P>
+<I><I>There is a second option to examine multiple peaks simultaneously: a non-sinusoidal periodicity is represented by multiple peaks in the DFT amplitude spectrum. One finds a fundamental frequency, plus one or more harmonics the frequencies of which are integer multiples of the fundamental. In astronomical applications, this may occur if shock waves are present in the stellar pulsation or if surface variations are examined. In such a case, it is desirable to take into account not only the fundamental frequency, but also all available harmonics at once. This analysis of harmonics is described on p.<A HREF="node35.html#SIGSPEC_Analysis_of_Harmonics"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</I></I>
+<P>
+<I><I>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> is capable of analysing multiple time series input files simultaneously. This MultiFile mode (p.<A HREF="node36.html#SIGSPEC_MultiFile_Mode"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>) speeds up the computation considerably for time series with the same sampling.
+</I></I>
+<P>
+<I><I>A further option is the evaluation of differential significance spectra (p.<A HREF="node38.html#SIGSPEC_Differential_significance_spectra"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). The user may specify target vs. comparison data among the input files. Then S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> performs a quantitative comparison of the two groups of time series and returns a measure of the probability that a peak in a target dataset is `true', taking into account amplitudes and phases at the corresponding frequency in the comparison spectra. In this context, the term `true' is used in the sense of `not entirely produced by the same variability as present in the comparison data'.
+</I></I>
+<P>
+<I><I>The examples presented here refer to the sample projects available for download at <TT>http://www.astro.univie.ac.at/SigSpec</TT>.
+</I></I>
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html512"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html508"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html502"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html510"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html513"
+  HREF="node5.html">How to Run SIGSPEC</A>
+<B> Up:</B> <A NAME="tex2html509"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html503"
+  HREF="node3.html">Abstract</A>
+ &nbsp; <B>  <A NAME="tex2html511"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

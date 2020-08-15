@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>SIGSPEC result files</TITLE>
+<META NAME="description" CONTENT="SIGSPEC result files">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node135.html">
+<LINK REL="previous" HREF="node133.html">
+<LINK REL="up" HREF="node132.html">
+<LINK REL="next" HREF="node135.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2200"
+  HREF="node135.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2196"
+  HREF="node132.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2190"
+  HREF="node133.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2198"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2201"
+  HREF="node135.html">The .cnd file</A>
+<B> Up:</B> <A NAME="tex2html2197"
+  HREF="node132.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html2191"
+  HREF="node133.html">Time series input files</A>
+ &nbsp; <B>  <A NAME="tex2html2199"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00342000000000000000"></A><A NAME="CINDERELLA_SigSpec_result_files"></A>
+<BR>
+S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result files
+</H2>
+<P>
+<I><I>The S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result files <TT>#index#.result.dat</TT> are located in the project directory and contain a list of all sig maxima associated to each of the input time series <TT>#index#.&lt;project&gt;.dat</TT>. A S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result file consists of seven columns. A full description is provided by the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> manual, p.<A HREF="node22.html#SIGSPEC_Result_files"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>. C<SMALL>INDERELLA</SMALL> uses only five columns:
+</I></I>
+<P>
+<UL>
+<LI>the frequency [inverse time units] (column 1),
+</LI>
+<LI>the sig (column 2),
+</LI>
+<LI>the amplitude [units of observable] (column 3),
+</LI>
+<LI>rms scatter of the time series before prewhitening (column 5), and
+</LI>
+<LI>point-to-point scatter of the time series before prewhitening (column 6).
+</LI>
+</UL>
+<P>
+<I><I>The last line of a result file contains only two non-zero values in columns 5 and 6. These represent the rms and point-to-point scatter of the time series after the last prewhitening step, correspondingly, and are also used by C<SMALL>INDERELLA</SMALL>.
+</I></I>
+<P>
+<I><I>
+<BR>
+<BR><B>Example.</B><A NAME="CINDERELLA_EXnormalrun"></A> <I>The sample project <TT>CinderellaNative</TT> provides a run without any additional options by typing <TT>Cinderella CinderellaNative</TT>. The files <TT>000000.CinderellaNative.dat</TT>, ..., <TT>000008.CinderellaNative.dat</TT> are the same as <TT>000038.diffsig.dat</TT> to <TT>000046.diffsig.dat</TT> in the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> example <TT>diffsig</TT> (Reegen 2009, p.<A HREF="node38.html#SIGSPEC_EXdiffsig"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), correspondingly.
+</I></I></I>
+<P>
+<I><I><I>The S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result files <TT>000000.result.dat</TT> to <TT>000008.result.dat</TT> are provided in the project directory <TT>CinderellaNative</TT>. They contain all signal components found with sig <IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img215.png"
+ ALT="$&gt;$"> 2 and are displayed in Fig.<A HREF="node133.html#CINDERELLA_normalrun.res"><I>1</I></A><I>.
+</I></I></I></I>
+<P>
+<I><I><I><I>The screen output at runtime starts with a standard header.</I></I>
+</I></I>
+<P><I></I><PRE>
+ CCCCC  ii            dd                      ll  ll
+CC   CC               dd                      ll  ll
+CC      ii n nnn   ddddd  eeee  r rrr   eeee  ll  ll   aaaa
+CC      ii nn  nn dd  dd ee  ee rr  rr ee  ee ll  ll  aa  aa
+CC      ii nn  nn dd  dd ee  ee rr     ee  ee ll  ll      aa
+CC      ii nn  nn dd  dd eeeeee rr     eeeeee ll  ll   aaaaa
+CC      ii nn  nn dd  dd ee     rr     ee     ll  ll  aa  aa
+CC   CC ii nn  nn dd  dd ee  ee rr     ee  ee ll  ll  aa  aa
+ CCCCC  ii nn  nn  ddd d  eeee  rr      eeee   ll  ll  aaa a
+
+
+Comparison of INDEpendent RELative Least-squares Amplitudes
+Version 1.0
+************************************************************
+by Piet Reegen
+Institute of Astronomy
+University of Vienna
+Tuerkenschanzstrasse 17
+1180 Vienna, Austria
+Release date: April 29, 2008
+</PRE><I></I>
+<P>
+<I><I><I>The program starts with processing the command line, checking if a present directory <TT>CinderellaNative</TT> is present, and searching for a configuration file <TT>CinderellaNative.cnd</TT> (see ``The <TT>.cnd</TT> file'', p.<A HREF="node135.html#CINDERELLA_The_.cnd_file"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). Since there is no such file present, C<SMALL>INDERELLA</SMALL> produces a warning message.</I>
+</I></I>
+<P><I></I><PRE>
+*** start **************************************************
+
+Checking availability of project directory CinderellaNative...
+project directory CinderellaNative ok.
+
+Warning: CndFile_LoadCnd 001
+         Failed to open .cnd file.
+</PRE><I></I>
+<P>
+<I><I><I>Now C<SMALL>INDERELLA</SMALL> counts the time series input files and checks for corresponding S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result files.</I>
+</I></I>
+<P><I></I><PRE>
+*** MultiFile count ****************************************
+
+Number of files                           9
+</PRE><I></I>
+<P>
+<I><I><I>The next step is to count the rows in each S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result file.</I>
+</I></I>
+<P><I></I><PRE>
+*** count rows in SigSpec result files *********************
+
+CinderellaNative/000000.result.dat:    106 rows
+CinderellaNative/000001.result.dat:     21 rows
+CinderellaNative/000002.result.dat:     21 rows
+CinderellaNative/000003.result.dat:     21 rows
+CinderellaNative/000004.result.dat:     21 rows
+CinderellaNative/000005.result.dat:     21 rows
+CinderellaNative/000006.result.dat:     21 rows
+CinderellaNative/000007.result.dat:     21 rows
+CinderellaNative/000008.result.dat:     21 rows
+</PRE><I></I>
+<P>
+<I><I><I>Before reading the input files, C<SMALL>INDERELLA</SMALL> performs the assignment of <TT>target</TT>, <TT>comp</TT> and <TT>skip</TT> tags to the datasets (see ``Dataset Types'', p.<A HREF="node137.html#CINDERELLA_Dataset_Types"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). Since there is no file <TT>CinderellaNative.cnd</TT> available, the defaults are used: the first file, <TT>000000.CinderellaNative.dat</TT> is considered a comparison dataset, the eight remaining files are interpreted as targets.</I>
+</I></I>
+<P><I></I><PRE>
+*** dataset type assignment ********************************
+
+
+Warning: CndFile_Cind 001
+         Failed to open .cnd file.
+         Assigning default types.
+
+000000.CinderellaNative.dat: comparison (default)
+000001.CinderellaNative.dat: target (default)
+000002.CinderellaNative.dat: target (default)
+000003.CinderellaNative.dat: target (default)
+000004.CinderellaNative.dat: target (default)
+000005.CinderellaNative.dat: target (default)
+000006.CinderellaNative.dat: target (default)
+000007.CinderellaNative.dat: target (default)
+000008.CinderellaNative.dat: target (default)
+
+number of target datasets                 8
+number of comparison datasets             1
+number of datasets to skip                0
+</PRE><I></I>
+<P>
+<I><I><I>The time series and S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result files are read, and C<SMALL>INDERELLA</SMALL> displays the frequency resolution and the mean observable for each time series.</I>
+</I></I>
+<P><I></I><PRE>
+*** read input files ***************************************
+
+000000.CinderellaNative.dat: Rayleigh resolution 0.1089880382935977
+000000.CinderellaNative.dat: mean observable     0.0074422789800987
+CinderellaNative/000000.result.dat
+000001.CinderellaNative.dat: Rayleigh resolution 0.0914470160931467
+000001.CinderellaNative.dat: mean observable    -0.0704869463068650
+CinderellaNative/000001.result.dat
+000002.CinderellaNative.dat: Rayleigh resolution 0.0914470160931467
+000002.CinderellaNative.dat: mean observable    -0.0875484339175066
+CinderellaNative/000002.result.dat
+000003.CinderellaNative.dat: Rayleigh resolution 0.0914470160931467
+000003.CinderellaNative.dat: mean observable    -0.1046099215281657
+CinderellaNative/000003.result.dat
+000004.CinderellaNative.dat: Rayleigh resolution 0.0914470160931467
+000004.CinderellaNative.dat: mean observable    -0.1216714091388107
+CinderellaNative/000004.result.dat
+000005.CinderellaNative.dat: Rayleigh resolution 0.0914470160931467
+000005.CinderellaNative.dat: mean observable    -0.1387328967494604
+CinderellaNative/000005.result.dat
+000006.CinderellaNative.dat: Rayleigh resolution 0.0914470160931467
+000006.CinderellaNative.dat: mean observable    -0.1557943843601256
+CinderellaNative/000006.result.dat
+000007.CinderellaNative.dat: Rayleigh resolution 0.0914470160931467
+000007.CinderellaNative.dat: mean observable    -0.1728558719707690
+CinderellaNative/000007.result.dat
+000008.CinderellaNative.dat: Rayleigh resolution 0.0914470160931467
+000008.CinderellaNative.dat: mean observable    -0.1899173595814251
+CinderellaNative/000008.result.dat
+</PRE><I></I>
+<P>
+<I><I><I>The amplitudes in the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result file of the comparison dataset (file <TT>CinderellaNative/000000.result.dat</TT> have to be transformed in order to be comparable to the target datasets (see ``Amplitude transformation'', p.<A HREF="node148.html#CINDERELLA_Amplitude_transformation"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). C<SMALL>INDERELLA</SMALL> uses the rms residual as a measure for this transformation. This is the default setting.</I>
+</I></I>
+<P><I></I><PRE>
+*** amplitude transformation *******************************
+
+by rms error: file                        0
+</PRE><I></I>
+<P>
+<I><I><I>The core of C<SMALL>INDERELLA</SMALL> consists of three different analyses. The first part of these is the computation of conditional sigs for each pair of target vs.&nbsp;comparison datasets. In this case we have eight target datasets and one comparison dataset, which results in eight operations. In general, the total number of operations performed in this step is the product of the number of target datasets times the number of comparison datasets. Detailed information on the computation of pairwise conditional sigs is found in ``Single-comparison output'' (p.<A HREF="node143.html#CINDERELLA_Single-comparison_output"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).</I>
+</I></I>
+<P><I></I><PRE>
+*** pairwise Cinderella analysis ***************************
+
+     1 vs.      0: conditional sig
+     2 vs.      0: conditional sig
+     3 vs.      0: conditional sig
+     4 vs.      0: conditional sig
+     5 vs.      0: conditional sig
+     6 vs.      0: conditional sig
+     7 vs.      0: conditional sig
+     8 vs.      0: conditional sig
+</PRE><I></I>
+<P>
+<I><I><I>The second part of the C<SMALL>INDERELLA</SMALL> analysis is a computation of mean conditional sigs for each target dataset over all comparison datasets (see ``Multi-comparison output'', p.<A HREF="node144.html#CINDERELLA_Multi-comparison_output"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). Since there is only one comparison dataset available in this example, the output of this procedure is the same as of the previous pairwise analysis. Finally, C<SMALL>INDERELLA</SMALL> evaluates composed sigs for each target dataset. This calculation is applied to the ``raw'' S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> results and also to the conditional sigs obtained by the previous operation. Details on the computation of composed sigs are found in ``Composed Mode'' (p.<A HREF="node149.html#CINDERELLA_Composed_Mode"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).</I>
+</I></I>
+<P><I></I><PRE>
+*** total Cinderella analysis ******************************
+
+     1: conditional sig
+     2: conditional sig
+     3: conditional sig
+     4: conditional sig
+     5: conditional sig
+     6: conditional sig
+     7: conditional sig
+     8: conditional sig
+composed sig
+composed sig of conditional sigs
+</PRE><I></I>
+<P>
+<I><I><I>On exit, C<SMALL>INDERELLA</SMALL> displays a goodbye message.</I>
+</I></I>
+<P><I></I><PRE>
+Finished.
+
+************************************************************
+
+Thank you for using Cinderella!
+Questions or comments?
+Please contact Piet Reegen (reegen@astro.univie.ac.at)
+Bye!
+</PRE><I></I>
+<P>
+<I><I><I>The C<SMALL>INDERELLA</SMALL> output for this example is discussed in the subsequent chapters.</I>
+</I></I>
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2200"
+  HREF="node135.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2196"
+  HREF="node132.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2190"
+  HREF="node133.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2198"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2201"
+  HREF="node135.html">The .cnd file</A>
+<B> Up:</B> <A NAME="tex2html2197"
+  HREF="node132.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html2191"
+  HREF="node133.html">Time series input files</A>
+ &nbsp; <B>  <A NAME="tex2html2199"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

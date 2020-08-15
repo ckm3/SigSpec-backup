@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Time series columns containing subset identifiers</TITLE>
+<META NAME="description" CONTENT="Time series columns containing subset identifiers">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html630"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html626"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html620"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html628"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html631"
+  HREF="node14.html">Lower frequency limit</A>
+<B> Up:</B> <A NAME="tex2html627"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html621"
+  HREF="node12.html">Time series columns containing</A>
+ &nbsp; <B>  <A NAME="tex2html629"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00245000000000000000"></A><A NAME="SIGSPEC_Time_series_columns_containing_subset_identifiers"></A>
+<BR>
+Time series columns containing subset identifiers
+</H2><I><I><I></I>
+<P>
+<I><I><I><I><I><I>If the mean magnitude of a light curve is desired to be adjusted to zero for each night, or if the data are obtained from more than one site, one may perform an individual zero-mean correction for subsets of the total time series. This is achieved by the keyword <TT>col:ssid</TT><A NAME="SIGSPEC_keyword.col:ssid"></A> in the .ini file. This keyword is followed by the index of the column which shall be assigned to subset identifiers and may be multiply defined, if more than one subset identifier column is given. Subset identifiers may be arbitrary alpha-numeric strings.
+</I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I>If <TT>col:ssid</TT> is specified, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> treats all lines in the dataset with equal subset identifiers as individual subsets, for each of which a zero-mean correction is performed. Subsequently, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> performs the appropriate statistical calculations, taking into account that the zero-mean correction for subsets diminishes the degrees of freedom for noise.
+</I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I>If more than one subset column is specified, data points are considered to belong to the same subset, if all corresponding subset identifiers are equal.
+</I></I></I></I></I></I>
+<P>
+<I><I><I></I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_subsets.dat"></A><A NAME="3825"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>5</I>:</STRONG>
+Light curve for the sample project <TT>subsets</TT>. <EM>Solid line:</EM> Sinusoidal signal used as input.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="384" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/subsets.dat.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I></I>
+<P>
+<I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>subsets</TT> contains a dataset with subset identifiers in column 3. The input time series <TT>subsets.dat</TT> represents the sampling of IC4996#89 (V), and the magnitudes were synthesized by adding
+</I></I></I></I></I></I></I>
+<OL>
+<LI>Gaussian noise with 5 mmag rms deviation,
+</LI>
+<LI>a sinusoid with frequency 6.43682 cycles per day and amplitude 2.62 mmag,
+</LI>
+<LI>individual constant zeropoint offsets on a millimag range for each night.
+</LI>
+</OL><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I>The resulting light curve is displayed in Fig.<A HREF="#SIGSPEC_subsets.dat"><I>5</I></A><I>, displaying the input signal as a solid line and the data points including the nightly offsets as open dots. Fig.<A HREF="#SIGSPEC_subsets.s"><I>6</I></A> <I>compares the resulting frequency domain output (a closeup for frequencies below 10 cycles per day) with and without employing the weights. If no subdivision according to the subset identifiers is performed, the spectra show a peak at 6.4 cycles per day plus several spurious peaks at frequencies below 2 cycles per day, which are due to the interpretation of the nightly shifts as signal in the 1-cycle-per-day domain and also harmonics.<A NAME="tex2html8"
+  HREF="footnode.html#foot3601"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> Consequently, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> identifies two additional significant signal components at low frequencies:
+</I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I></I><PRE>
+   1 freq 0.575256  sig 14.5784  rms 6.0813  csig 14.5784
+   2 freq 7.43176  sig 6.39232  rms 5.51956  csig 6.39232
+   3 freq 0.286066  sig 5.21585  rms 5.29531  csig 5.18785
+   4 freq 75.1664  sig 3.39587  rms 5.12278  csig 3.38892
+</PRE><I></I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I>Column 3 in the time series input file <TT>weights.dat</TT> contains characters A to J uniquely assigned to each night. Employing the subsets column eliminates the low-frequency artefacts, and S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> provides the component at 6.4 cycles per day as the only significant signal:</I></I></I></I>
+</I></I></I></I></I></I>
+<P>
+<I><I><I></I><I></I><PRE>
+   1 freq 6.4376  sig 8.20485  rms 5.2253  csig 8.20485
+   2 freq 75.1661  sig 3.70924  rms 4.95954  csig 3.70922
+</PRE><I><I><I></I>
+<P>
+<I><I><I></I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_subsets.s"></A><A NAME="3832"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>6</I>:</STRONG>
+<EM>Grey:</EM> Fourier spectra for the sample project <TT>subsets</TT>. <EM>Left:</EM> significance spectra. <EM>Right:</EM> DFT amplitudes. <EM>Top:</EM> spectra of the total time series. <EM>Bottom:</EM> spectra of the subdivided time series. The significant components are indicated by <EM>dots</EM> with dashed drop lines (file <TT>subsets/result.dat</TT>). The default sig threshold of 5 is represented by a horizontal <EM>dashed line</EM> in the left panels.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="385" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/subsets.s.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I></I>
+<P>
+<I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html630"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html626"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html620"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html628"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html631"
+  HREF="node14.html">Lower frequency limit</A>
+<B> Up:</B> <A NAME="tex2html627"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html621"
+  HREF="node12.html">Time series columns containing</A>
+ &nbsp; <B>  <A NAME="tex2html629"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

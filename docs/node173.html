@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Frequency resolution</TITLE>
+<META NAME="description" CONTENT="Frequency resolution">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node174.html">
+<LINK REL="previous" HREF="node172.html">
+<LINK REL="up" HREF="node171.html">
+<LINK REL="next" HREF="node174.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2706"
+  HREF="node174.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2702"
+  HREF="node171.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2696"
+  HREF="node172.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2704"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2707"
+  HREF="node174.html">Limit of harmonic order</A>
+<B> Up:</B> <A NAME="tex2html2703"
+  HREF="node171.html">How COMBINE Works</A>
+<B> Previous:</B> <A NAME="tex2html2697"
+  HREF="node172.html">Sig vs.&nbsp;csig</A>
+ &nbsp; <B>  <A NAME="tex2html2705"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00442000000000000000"></A><A NAME="COMBINE_Frequency_resolution"></A>
+<BR>
+Frequency resolution
+</H2>
+<P>
+<I><I>The adjustment of the frequency resolution <IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img242.png"
+ ALT="$\delta f$"> is consistent with Eq.<A HREF="node146.html#CINDERELLA_EQ_fres"><I>3</I></A> in the C<SMALL>INDERELLA</SMALL> manual (Reegen 2009), where the total time interval width <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$T$"> has to be provided by the user, because the time series is not incorporated by C<SMALL>OMBINE</SMALL>. Moreover, the user is more flexible if allowed to specify a different value for <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$T$">. This interval width is provided by means of the keyword <TT>dt</TT><A NAME="COMBINE_keyword.dt"></A> in the file <TT>&lt;infile&gt;.ini</TT>, followed by a floating-point number. The default setting is that C<SMALL>OMBINE</SMALL> determines the closest pair of frequencies and uses its inverse frequency spacing as <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$T$">.
+</I></I>
+<P>
+<I><I>The second parameter, <IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img243.png"
+ ALT="$\tau$">, is specified using the keyword <TT>tol</TT><A NAME="COMBINE_keyword.tol"></A>, again followed by a floating-point number, in full consistency with C<SMALL>INDERELLA</SMALL>. The default value is <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img222.png"
+ ALT="$\tau = 0$">, forcing C<SMALL>OMBINE</SMALL> to employ the Rayleigh frequency resolution.
+</I></I>
+<P>
+<I><I>The frequency tolerance permits linear combinations where
+</I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\alpha := \left| f-f^{\prime}\right|\le\delta f
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="COMBINE_EQ_acc"></A><IMG
+ WIDTH="124" HEIGHT="28" BORDER="0"
+ SRC="img244.png"
+ ALT="\begin{displaymath}
+\alpha := \left\vert f-f^{\prime}\right\vert\le\delta f
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(36)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I>
+only. The quantity <IMG
+ WIDTH="15" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img245.png"
+ ALT="$\alpha$"> is the accuracy of a linear combination and provided in the output.
+</I></I>
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2706"
+  HREF="node174.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2702"
+  HREF="node171.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2696"
+  HREF="node172.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2704"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2707"
+  HREF="node174.html">Limit of harmonic order</A>
+<B> Up:</B> <A NAME="tex2html2703"
+  HREF="node171.html">How COMBINE Works</A>
+<B> Previous:</B> <A NAME="tex2html2697"
+  HREF="node172.html">Sig vs.&nbsp;csig</A>
+ &nbsp; <B>  <A NAME="tex2html2705"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

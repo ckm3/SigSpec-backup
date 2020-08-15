@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>MultiSine profiles</TITLE>
+<META NAME="description" CONTENT="MultiSine profiles">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="previous" HREF="node29.html">
+<LINK REL="up" HREF="node28.html">
+<LINK REL="next" HREF="node31.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html835"
+  HREF="node31.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html831"
+  HREF="node28.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html827"
+  HREF="node29.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html833"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html836"
+  HREF="node31.html">Preview</A>
+<B> Up:</B> <A NAME="tex2html832"
+  HREF="node28.html">MultiSine Output</A>
+<B> Previous:</B> <A NAME="tex2html828"
+  HREF="node29.html">MultiSine tracks</A>
+ &nbsp; <B>  <A NAME="tex2html834"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00272000000000000000"></A><A NAME="SIGSPEC_MultiSine_profiles"></A>
+<BR>
+MultiSine profiles
+</H2><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>A closer examination of the accuracy of the MultiSine fitting procedure is provided by the MultiSine profiles. If the user specifies the keyword <TT>msprofs</TT> in the <TT>.ini</TT> file, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> produces additional output files <TT>f#iteration#.dat</TT>, <TT>a#iteration#.dat</TT>, and <TT>p#iteration#.dat</TT>. The idea is to evaluate the rms residual through modifying a single parameter of a single signal component, keeping all other parameters constant. Performing this operation for the frequency of each component produces a set of rms-residual-vs.-frequency plots, all written to the file <TT>f#iteration#.dat</TT>. Correspondingly, the files <TT>a#iteration#.dat</TT> and <TT>p#iteration#.dat</TT> contain rms-residual-vs.-amplitude and rms-residual-vs.-phase plots. The frequencies are scanned around the best fit by <!-- MATH
+ $\pm\frac{1}{T\sqrt{\mathrm{sig}}}$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.png"
+ ALT="$\pm\frac{1}{T\sqrt{\mathrm{sig}}}$">, <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$T$"> denoting the time interval width of the input time series, and sig referring to the signal component under consideration. The amplitudes are calculated from zero to twice the amplitude of best fit, and the phases in a range of <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.png"
+ ALT="$\pm\pi$"> around the phase of best fit.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The keyword <TT>msprofs</TT> is followed by three integer values, the first denoting the number of data points an individual MultiSine profile shall consist of.<A NAME="tex2html20"
+  HREF="footnode.html#foot1138"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> The second parameter defines the number of iterations for which MultiSine profiles shall be generated. A negative number causes S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to generate profiles for all iterations. The third parameter has to be a positive number and defines a step width. If it is set <TT>1</TT>, a MultiSine profile is generated after each iteration, if it is set <TT>2</TT>, after every second iteration (starting with <TT>f000002.dat</TT>, <TT>a000002.dat</TT>, <TT>p000002.dat</TT>), and so on.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The output files consist of seven columns:
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI>frequency, amplitude, or phase, respectively,
+</LI>
+<LI>rms residual,
+</LI>
+<LI>first-order approximation, based on the tangential gradient (which should be zero, so that the deviation from zero is a measure of the accuracy of the MultiSine fitting procedure),
+</LI>
+<LI>second-order approximation, based on the first and second derivatives at the parameter value of best fit,
+</LI>
+<LI>point-to-point scatter,
+</LI>
+<LI>index of the signal component,
+</LI>
+<LI>index of the harmonic (<IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.png"
+ ALT="$0$"> for fundamental), see ``Analysis of Harmonics'', p.<A HREF="node35.html#SIGSPEC_Analysis_of_Harmonics"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>.
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>For each signal component, the first row refers to the parameter value of best fit, as used in the result file.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>output</TT> uses the keyword <TT>msprofs</TT> in the file <TT>output.ini</TT>, namely
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+msprofs 10000 50 3
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>providing MultiSine profiles (<TT>f000003.dat</TT>, <TT>a000003.dat</TT>, <TT>p000003.dat</TT>), (<TT>f000006.dat</TT>, <TT>a000006.dat</TT>, <TT>p000006.dat</TT>),..., for a maximum of 50 iterations of prewhitening sequence. Each MultiSine profile is specified to contain 10000 data points. The number of significant components found in the time series <TT>output.dat</TT> is 33, so that the last set of MultiSine profiles (<TT>f000033.dat</TT>, <TT>a000033.dat</TT>, <TT>p000033.dat</TT>) refers to the final solution contained in the file <TT>result.dat</TT>. The MultiSine ptofiles for the primary signal component at 8.59 cycles per day are displayed in Fig.<A HREF="#SIGSPEC_msprofs"><I>16</I></A><I>.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_msprofs"></A><A NAME="3915"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>16</I>:</STRONG>
+MultiSine profiles of the most dominant signal component in the light curve of the sample project <TT>output</TT> (8.59 cycles per day), according to the output files <TT>output/f000033.dat</TT>, <TT>output/a000033.dat</TT>, <TT>output/p000033.dat</TT>. <EM>Left</EM>: rms residual vs.&nbsp;frequency. <EM>Mid:</EM> rms residual vs.&nbsp;amplitude. <EM>Right:</EM> rms residual vs.&nbsp;phase. The <EM>solid black</EM> line refers to the rms residual, the <EM>dashed black</EM> line to the tangential gradient at the value of best fit (which should be zero), and the <EM>dashed-dotted black</EM> line to a second-order approximation based on the first two derivatives of rms residual. The <EM>solid grey</EM> line represents the point-to-point scatter.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="498" HEIGHT="181" ALIGN="BOTTOM" BORDER="0"
+ SRC="img96.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/msprofs.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html835"
+  HREF="node31.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html831"
+  HREF="node28.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html827"
+  HREF="node29.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html833"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html836"
+  HREF="node31.html">Preview</A>
+<B> Up:</B> <A NAME="tex2html832"
+  HREF="node28.html">MultiSine Output</A>
+<B> Previous:</B> <A NAME="tex2html828"
+  HREF="node29.html">MultiSine tracks</A>
+ &nbsp; <B>  <A NAME="tex2html834"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Rejecting Unwanted Linear Combinations</TITLE>
+<META NAME="description" CONTENT="Rejecting Unwanted Linear Combinations">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node180.html">
+<LINK REL="previous" HREF="node178.html">
+<LINK REL="up" HREF="node167.html">
+<LINK REL="next" HREF="node180.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2776"
+  HREF="node180.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2772"
+  HREF="node167.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2766"
+  HREF="node178.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2774"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2777"
+  HREF="node180.html">Keywords Reference</A>
+<B> Up:</B> <A NAME="tex2html2773"
+  HREF="node167.html">Combine User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2767"
+  HREF="node178.html">Order of Input Rows</A>
+ &nbsp; <B>  <A NAME="tex2html2775"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00470000000000000000"></A><A NAME="COMBINE_Rejecting_Unwanted_Linear_Combinations"></A>
+<BR>
+Rejecting Unwanted Linear Combinations
+</H1><I><I><I></I>
+<P>
+<I><I><I><I><I><I>Moreover, the user may indicate unwanted signal components in the input file <TT>&lt;infile&gt;</TT> by applying a minus sign to the corresponding frequencies. C<SMALL>OMBINE</SMALL> reacts with a corresponding change of the sign for the reliability. If the user additionally provides the keyword <TT>reject</TT><A NAME="COMBINE_keyword.reject"></A> in the file <TT>&lt;infile&gt;.ini</TT>, all rows are rejected from the output file <TT>&lt;infile&gt;.cmb</TT> for which the most reliable linear combination contains one or more unwanted frequencies.
+</I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I>The screen output contains linear combinations incorporating unwanted frequencies at runtime. To indicate such unwanted combinations, the reliability is displayed as a negative value. If the examination of an input line finishes with the ``best'' linear combination containing an unwanted frequency, the corresponding line is removed from the screen output.
+</I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B><A NAME="tex2html59"
+  HREF="footnode.html#foot3723"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> <I>The input of the sample project <TT>reject</TT> is the same as for <TT>order</TT>, with a minus sign for the first frequency of 14.188 cycles per day, which represents the orbit of the MOST spacecraft. The file <TT>result.dat.ini</TT> contains an additional line,
+</I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I></I><PRE>
+reject
+</PRE><I></I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I>The combination of this keyword and the negative sign for the first signal component in the input file forces C<SMALL>OMBINE</SMALL> to reject all linear combinations incorporating the frequency 14.188 cycles per day from the output file <TT>result.dat.cmb</TT>. In the screen output, such linear combinations are indicated by a negative reliability, e.g.
+</I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I></I><PRE>
+row 005: f001+3f002+2f003+0.0136421 -0.325575
+</PRE><I></I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I>This entry is visible at runtime, but vanishes from the screen output when the calculations for row 006 start.</I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2776"
+  HREF="node180.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2772"
+  HREF="node167.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2766"
+  HREF="node178.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2774"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2777"
+  HREF="node180.html">Keywords Reference</A>
+<B> Up:</B> <A NAME="tex2html2773"
+  HREF="node167.html">Combine User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2767"
+  HREF="node178.html">Order of Input Rows</A>
+ &nbsp; <B>  <A NAME="tex2html2775"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Time series columns containing statistical weights</TITLE>
+<META NAME="description" CONTENT="Time series columns containing statistical weights">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html618"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html614"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html608"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html616"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html619"
+  HREF="node13.html">Time series columns containing</A>
+<B> Up:</B> <A NAME="tex2html615"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html609"
+  HREF="node11.html">Time series columns representing</A>
+ &nbsp; <B>  <A NAME="tex2html617"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00244000000000000000"></A><A NAME="SIGSPEC_Time_series_columns_containing_statistical_weights"></A>
+<BR>
+Time series columns containing statistical weights
+</H2>
+<P>
+<I><I>Furthermore, one or more columns with statistical weights may be specified using the keyword <TT>col:weights</TT><A NAME="SIGSPEC_keyword.col:weights"></A>. The keyword accepts two arguments: the first is the column index, the second is a floating-point value, say <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$p_n$"> for the <IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$n$">th weights column. Given <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$N$"> weights columns indexed according to <!-- MATH
+ $n = 1,\, ...,\, N$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$n = 1,\, ...,\, N$">, the total weight for the <IMG
+ WIDTH="18" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$m$">th row is evaluated using the weights <IMG
+ WIDTH="36" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$w_{nm}$"> in the individual columns according to
+</I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\Gamma _m := \prod _{n=1}^{N}\gamma _{nm}^{p_n}\: .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="110" HEIGHT="56" BORDER="0"
+ SRC="img52.png"
+ ALT="\begin{displaymath}
+\Gamma _m := \prod _{n=1}^{N}\gamma _{nm}^{p_n}\: .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<P>
+<I><I>Weights need not be normalised, this is performed by S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL>.
+</I></I>
+<P>
+<I><I>Time, observable, and weights columns have to consist of floating-point numbers only. S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> checks these columns before starting the computations. If a non-numeric entry is found in one of the special columns, the program terminates with an error message.
+</I></I>
+<P>
+<I><I>
+<BR>
+<BR>
+<B>Caution: S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> does not support the exponential annotation (e.g.&nbsp;<TT>4.234E03</TT> or <TT>1.0385e-03</TT>)!</B>
+<BR>
+<BR>
+</I></I>
+<P>
+<I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>weights</TT> contains a dataset with statistical weights in column 3 the squares of which are used by S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL>, as specified by the <TT>.ini</TT> file entry
+</I></I></I>
+<P>
+<I></I><PRE>
+col:weights 3 2
+</PRE><I></I>
+<P>
+<I><I><I>The input time series <TT>weights.dat</TT> represents the sampling of IC4996#89 (V), and the magnitudes were synthesized by
+</I></I></I>
+<OL>
+<LI>a sinusoid with frequency 4.68573 cycles per day, amplitude 17.27 mmag,
+</LI>
+<LI>Gaussian noise with 25 mmag rms deviation only for the measurements between HJD 2452524 and HJD 2452525,
+</LI>
+<LI>Gaussian noise with 2.5 mmag rms deviation for all other nights.
+</LI>
+</OL>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_weights.dat"></A><A NAME="3805"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>3</I>:</STRONG>
+Light curve for the sample project <TT>weights</TT>.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="499" HEIGHT="386" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/weights.dat.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<I><I><I>The resulting light curve is displayed in Fig.<A HREF="#SIGSPEC_weights.dat"><I>3</I></A><I>. Fig.<A HREF="#SIGSPEC_weights.s"><I>4</I></A> <I>compares the frequency domain output (a closeup for frequencies below 10 cycles per day) with and without employing the weights. Without weights, the peak at 4.7 cycles per day visible, but not the most significant one. Moreover, there is no signal that reaches the sig threshold of 5.<A NAME="tex2html5"
+  HREF="footnode.html#foot3598"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A></I></I></I></I></I>
+<P>
+<I><I><I></I><PRE>
+   1 freq 5.68136  sig 3.75547  rms 0.088716  csig 3.75547
+</PRE><I></I><I><I>
+<P>
+<I><I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_weights.s"></A><A NAME="3811"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>4</I>:</STRONG>
+<EM>Grey:</EM> Fourier spectra for the sample project <TT>weights</TT>. <EM>Left:</EM> significance spectra. <EM>Right:</EM> DFT amplitudes. <EM>Top:</EM> spectra of the unweighted time series. <EM>Bottom:</EM> spectra employing statistical weights. The significant components are indicated by <EM>dots</EM> with dashed drop lines (file <TT>weights/result.dat</TT>). The default sig threshold of 5 is represented by a horizontal <EM>dashed line</EM> in the left panels.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="498" HEIGHT="385" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/weights.s.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I>
+<P>
+<I><I><I><I><I>Column 3 in the time series input file <TT>weights.dat</TT> contains zeroes for the measurements between HJD2452524 and HJD2452525 and values of 1 for the rest. Consequently, in this example, the exponent 2 assigned to the keyword <TT>col:weights</TT> in the file <TT>weights.ini</TT> does not affect the weighting: the result would be the same if, e.g., 
+</I></I></I></I></I>
+<P>
+<I><I><I></I><PRE>
+col:weights 3 1
+</PRE><I></I><I><I>
+<P>
+<I><I><I><I><I>were given instead of
+</I></I></I></I></I>
+<P>
+<I><I><I></I><PRE>
+col:weights 3 2
+</PRE><I></I><I><I>
+<P>
+<I><I><I><I><I>Employing the weights column, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> provides the component at 4.7 cycles per day as the only significant signal:
+</I></I></I></I></I>
+<P>
+<I><I><I></I><PRE>
+   1 freq 4.67968  sig 20.395  rms 0.029129  csig 20.395
+   2 freq 30.5489  sig 4.47468  rms 0.0252866  csig 4.47468
+</PRE><I></I><I><I><I></I>
+<P>
+<I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html618"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html614"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html608"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html616"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html619"
+  HREF="node13.html">Time series columns containing</A>
+<B> Up:</B> <A NAME="tex2html615"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html609"
+  HREF="node11.html">Time series columns representing</A>
+ &nbsp; <B>  <A NAME="tex2html617"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Preview</TITLE>
+<META NAME="description" CONTENT="Preview">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node32.html">
+<LINK REL="previous" HREF="node28.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node32.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html847"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html843"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html837"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html845"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html848"
+  HREF="node32.html">Correlograms</A>
+<B> Up:</B> <A NAME="tex2html844"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html838"
+  HREF="node30.html">MultiSine profiles</A>
+ &nbsp; <B>  <A NAME="tex2html846"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00280000000000000000"></A><A NAME="SIGSPEC_Preview"></A>
+<BR>
+Preview
+</H1><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Since the prewhitening cascade performed by S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> may be extremely time consuming, the program can compute a preview. This add-on is activated by the keyword <TT>preview</TT><A NAME="SIGSPEC_keyword.preview"></A> in the <TT>.ini</TT> file.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Whereas the significance spectra rely on the False-Alarm Probability compared to a noise dataset with the same rms error as the given time series (or series of residuals, respectively), the significance spectrum provided in the file <TT>preview.dat</TT> represents a set of identified maxima in the significance spectrum of the original time series, but based on the point-to-point scatter in the time domain rather than on the standard deviation of observables. The lower sig limit for writing a local maximum to the file <TT>preview.dat</TT> is specified as the argument to the keyword <TT>preview</TT> in the <TT>.ini</TT> file. 
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The calculation of the sig is based on the assumption that only the point-to-point scatter is random, and everything else contributing to the rms error represents signal that will be prewhitened in the course of the subsequent loop. The preview output is to be considered as a rough estimate for the final result obtained by step-by-step prewhitening and contains not only the intrinsic variations but also all aliases, which will not occur in the following analysis. The file <TT>preview.dat</TT> consists of four columns referring to
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI>frequency [inverse time units],
+</LI>
+<LI>sig,
+</LI>
+<LI>DFT amplitude [units of observable],
+</LI>
+<LI>phase [rad].
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>preview</TT> contains a preview file for the V photometry of IC4996#89. In the file <TT>preview.ini</TT>, the line
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><PRE>
+preview:siglimit 5
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>sets the sig threshold to 5. The output file <TT>preview/preview.dat</TT> contains 11 components, sorted by frequency. The frequencies and corresponding sigs in the first two columns are
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><PRE>
+ 0.9945158494303480	  6.1674140356166323
+ 1.9917563998155081	  6.9302735632389876
+ 2.1388902515119841	  6.7175642729893710
+ 2.9835475482878717	  8.6773027802854656
+ 3.1361308018982843	  9.4899187898938777
+ 3.9862375005883859	  8.9589776551282210
+ 4.1333713522847031	  8.7492615592402885
+ 4.9780286490607102	  5.0523760377159039
+ 5.1360613045861099	  5.3438911274207790
+11.0268647743572874	  5.5214237212500406
+12.0241053247411784	  5.6674302270769710
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Fig.<A HREF="#SIGSPEC_preview.s"><I>17</I></A> <I>displays the significance and amplitude spectrum of the original time series. Since the preview does not employ any prewhitenings, aliases are present in the file.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<UL>
+<LI>The signal at 3.132 cycles per day corresponds to components # 3, 5, 7, and 9.
+</LI>
+<LI>The signal at 3.986 cycles per day corresponds to components # 1, 2, 4, 6, and 8.
+</LI>
+<LI>The signal at 5.409 cycles per day is not found in the preview. In the result of the prewhitening sequence, its sig is 5.02. Since the sig in the preview relies on the rms deviation of the original time series, whereas the final sig is based on the rms deviation after the previous prewhitening step, the sig associated to this frequency falls below the pre-selected threshold of 5 in the preview. The significance spectrum (grey line in the left panel of Fig.<A HREF="#SIGSPEC_preview.s"><I>17</I></A><I>) shows a peak at the frequency under consideration the sig of which is <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.png"
+ ALT="$\approx$"> 4.8.
+</LI>
+<LI>Components # 10 and 11 are 1-cycle-per-day aliases of each other, but do not show up in the final result, <TT>preview/result.dat</TT>.
+</LI>
+</UL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_preview.s"></A><A NAME="3931"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>17</I>:</STRONG>
+<EM>Grey:</EM> Fourier spectra for the sample project <TT>preview</TT>. <EM>Left:</EM> significance spectrum. <EM>Right:</EM> DFT amplitudes. The significant components in the preview are indicated by <EM>dots</EM> with dashed drop lines (file <TT>preview/preview.dat</TT>). The default sig threshold of 5 is represented by a horizontal <EM>dashed line</EM> in the left panel.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="494" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img98.png"
+ ALT="\includegraphics[clip,angle=0,width=109mm, clip]{eps/preview.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html847"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html843"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html837"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html845"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html848"
+  HREF="node32.html">Correlograms</A>
+<B> Up:</B> <A NAME="tex2html844"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html838"
+  HREF="node30.html">MultiSine profiles</A>
+ &nbsp; <B>  <A NAME="tex2html846"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

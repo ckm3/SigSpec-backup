@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Spectra</TITLE>
+<META NAME="description" CONTENT="Spectra">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html715"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html711"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html705"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html713"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html716"
+  HREF="node21.html">Residual time series</A>
+<B> Up:</B> <A NAME="tex2html712"
+  HREF="node19.html">Default Output</A>
+<B> Previous:</B> <A NAME="tex2html706"
+  HREF="node19.html">Default Output</A>
+ &nbsp; <B>  <A NAME="tex2html714"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00251000000000000000"></A><A NAME="SIGSPEC_Spectra"></A>
+<BR>
+Spectra
+</H2><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>By default, two spectra (files <TT>s000000.dat</TT> and <TT>resspec.dat</TT>) are generated. The file <TT>s000000.dat</TT> contains the spectrum of the original time series, and the file <TT>resspec.dat</TT> represents the residual spectrum after finishing the prewhitening sequence. 
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The columns are
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI>frequency [inverse time units],
+</LI>
+<LI>sig,
+</LI>
+<LI>DFT amplitude [units of observable],
+</LI>
+<LI>Fourier-space phase angle [rad],
+</LI>
+<LI>Fourier-space phase angle of maximum sig [rad].
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>To achieve consistency with the output for differential significance spectra (see p.<A HREF="node38.html#SIGSPEC_Differential_significance_spectra"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), two further columns are found containing values <IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$-1$"> and <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.png"
+ ALT="$0$"> only.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The phase angles <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$\theta$"> are given according to a trigonometric fit,
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F\left( t\right) := A\cos\left( 2\pi ft - \theta\right)\, ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="179" HEIGHT="28" BORDER="0"
+ SRC="img77.png"
+ ALT="\begin{displaymath}
+F\left( t\right) := A\cos\left( 2\pi ft - \theta\right)\, ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+with amplitude <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$A$"> and frequency <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$f$"> as given in the file. This convention is compatible to the definition of phase in Fourier space. This definition of phase is consistently used for all types of S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> output.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>If the keyword <TT>spectra</TT><A NAME="SIGSPEC_keyword.spectra"></A> is provided in the <TT>.ini</TT> file, additional output files <TT>s#iteration#.dat</TT> are generated. The index <TT>#iteration#</TT> starts with <TT>000001</TT>, denoting the residual spectrum after the first prewhitening step. 
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The keyword <TT>spectra</TT> expects two integer parameters. The first defines the number of iterations for which these files shall be generated. A negative number causes S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to generate files for all iterations. The second parameter has to be a positive number and defines a step width. If it is set <TT>1</TT>, a file is generated after each iteration, if it is set <TT>2</TT>, after every second iteration (starting with <TT>s000002.dat</TT>), and so on.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>output</TT> uses the keyword <TT>spectra</TT> in the file <TT>output.ini</TT>, namely
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+spectra 10 2
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Spectra are written only during the first 10 iterations of the prewhitening sequence. The second parameter provides only every second file to be generated. In this example, the following files are produced:
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+output/s000000.dat
+output/s000002.dat
+output/s000004.dat
+output/s000006.dat
+output/s000008.dat
+output/s000010.dat
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>In addition, the file <TT>resspec.dat</TT> contains the residual spectrum after all iterations.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html715"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html711"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html705"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html713"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html716"
+  HREF="node21.html">Residual time series</A>
+<B> Up:</B> <A NAME="tex2html712"
+  HREF="node19.html">Default Output</A>
+<B> Previous:</B> <A NAME="tex2html706"
+  HREF="node19.html">Default Output</A>
+ &nbsp; <B>  <A NAME="tex2html714"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

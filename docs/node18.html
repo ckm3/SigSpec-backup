@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Program termination</TITLE>
+<META NAME="description" CONTENT="Program termination">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html688"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html684"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html680"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html686"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html689"
+  HREF="node19.html">Default Output</A>
+<B> Up:</B> <A NAME="tex2html685"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html681"
+  HREF="node17.html">Accuracy of MultiSine fits</A>
+ &nbsp; <B>  <A NAME="tex2html687"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION002410000000000000000"></A><A NAME="SIGSPEC_Program_termination"></A>
+<BR>
+Program termination
+</H2><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>There are three possibilities to specify a criterion for program termination:
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI>the number of iterations (keyword <TT>iterations</TT><A NAME="SIGSPEC_keyword.iterations"></A>),
+</LI>
+<LI>a lower sig limit (keyword <TT>siglimit</TT><A NAME="SIGSPEC_keyword.siglimit"></A>),
+</LI>
+<LI>the reliability of the entire analysis is determined by the <I>cumulative sig</I>. It is based on the probability that at least one of the frequency components detected so far is due to noise. A threshold in terms of cumulative sig may be defined using the keyword <TT>csiglimit</TT><A NAME="SIGSPEC_keyword.csiglimit"></A> For an introduction to the cumulative sig, please refer to p.<A HREF="node4.html#SIGSPEC_csig"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>.
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Multiple specifications in terms of these keywords cause the prewhitening cascade to terminate if one of the limits is reached.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The default assignment for <TT>siglimit</TT> is <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$5$">. This pre-definition may be deactivated by defining
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+siglimit 0
+</PRE><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>in the <TT>.ini</TT> file. The limits <TT>iterations</TT> and <TT>csiglimit</TT> are switched off by default.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>terminate</TT> contains a combination of the keywords <TT>siglimit</TT>, <TT>csiglimit</TT> and <TT>iterations</TT>, applied to the V photometry of IC4996#89 as input file. For a comparison to the standard output, please refer to Example <TT>SigSpecNative</TT>, p.<A HREF="node6.html#SIGSPEC_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>. The file <TT>terminate.ini</TT> contains a combination of three keywords:
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><PRE>
+siglimit 0
+csiglimit 3
+iterations 10
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The first line deactivates the default setting of 5 for the sig limit. The combination of the second and third line forces S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to terminate after 10 iterations, or earlier, if the cumulative sig drops below 3. The screen output provides seven lines, corresponding to six significant signal components:
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><PRE>
+   1 freq 3.13205  sig 9.54539  rms 0.00449592  csig 9.54539
+   2 freq 3.98471  sig 7.43085  rms 0.00422861  csig 7.42753
+   3 freq 5.40684  sig 5.30164  rms 0.0040257  csig 5.2984
+   4 freq 17.3677  sig 4.13698  rms 0.00388775  csig 4.10802
+   5 freq 3.67101  sig 3.73187  rms 0.00378701  csig 3.57943
+   6 freq 52.5182  sig 3.41319  rms 0.00369756  csig 3.18744
+   7 freq 41.7372  sig 3.02872  rms 0.00361981  csig 2.80001
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The cumulative sig of 2.8 for component 7 is responsible for program termination before the limit of 10 iterations is reached.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html688"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html684"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html680"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html686"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html689"
+  HREF="node19.html">Default Output</A>
+<B> Up:</B> <A NAME="tex2html685"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html681"
+  HREF="node17.html">Accuracy of MultiSine fits</A>
+ &nbsp; <B>  <A NAME="tex2html687"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

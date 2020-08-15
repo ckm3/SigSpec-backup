@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Time-resolved Analysis</TITLE>
+<META NAME="description" CONTENT="Time-resolved Analysis">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node34.html">
+<LINK REL="previous" HREF="node32.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node34.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html871"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html867"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html861"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html869"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html872"
+  HREF="node34.html">SIGSPEC AntiAlC: Anti-aliasing Correction</A>
+<B> Up:</B> <A NAME="tex2html868"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html862"
+  HREF="node32.html">Correlograms</A>
+ &nbsp; <B>  <A NAME="tex2html870"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION002100000000000000000"></A><A NAME="SIGSPEC_Time-resolved_Analysis"></A>
+<BR>
+Time-resolved Analysis
+</H1><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="3625"></A>
+<TABLE>
+<CAPTION><STRONG>Table <I>1</I>:</STRONG>
+Weight functions for time-resolved S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> analysis. The beginning of the time interval associated with the referring subset is denoted <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$t_B$">, whereas <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$t_C$"> symbolises the centre of the time interval.</CAPTION>
+<TR><TD><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT"><B>keyword</B></TD>
+<TD ALIGN="LEFT"><B>arguments</B></TD>
+<TD ALIGN="LEFT"><B>weight function</B></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>timeres:w:none</TT></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$1$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>timeres:w:ipow</TT></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="12" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.png"
+ ALT="$\xi$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.png"
+ ALT="$0$"> if <IMG
+ WIDTH="48" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$t=t_C$">, <!-- MATH
+ $\left|\, t-t_C\right| ^{-\xi}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.png"
+ ALT="$\left\vert\, t-t_C\right\vert ^{-\xi}$"> else</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>timeres:w:gauss</TT></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img104.png"
+ ALT="$\sigma$"></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\mathrm{e}^{-\left(\frac{ t-t_C}{\sigma}\right) ^2}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="25" ALIGN="BOTTOM" BORDER="0"
+ SRC="img105.png"
+ ALT="$\mathrm{e}^{-\left(\frac{ t-t_C}{\sigma}\right) ^2}$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>timeres:w:exp</TT></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\zeta$"></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\mathrm{e}^{-\frac{\left| t-t_C\right|}{\zeta}}$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="25" ALIGN="BOTTOM" BORDER="0"
+ SRC="img107.png"
+ ALT="$\mathrm{e}^{-\frac{\left\vert t-t_C\right\vert}{\zeta}}$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>timeres:w:damp</TT></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\zeta$"></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\mathrm{e}^{-\frac{t-t_B}{\zeta}}$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img108.png"
+ ALT="$\mathrm{e}^{-\frac{t-t_B}{\zeta}}$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>timeres:w:cos</TT></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$\nu ,\Phi$"></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\cos\left( 2\pi\nu\left|\, t-t_C\right| -\Phi\right)$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.png"
+ ALT="$\cos\left( 2\pi\nu\left\vert\, t-t_C\right\vert -\Phi\right)$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><TT>timeres:w:cosp</TT></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\nu ,\Phi ,\xi$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$\nu ,\Phi ,\xi$"></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\cos\, ^{\xi}\left( 2\pi\nu\left|\, t-t_C\right| -\Phi\right)$
+ -->
+<IMG
+ WIDTH="166" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\cos\, ^{\xi}\left( 2\pi\nu\left\vert\, t-t_C\right\vert -\Phi\right)$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<BR>
+<BR></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+<A NAME="SIGSPEC_TABwts"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>In time-resolved mode, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> performs an analysis for a set of time intervals rather than for the entire time series. An interval of width given by the keyword <TT>timeres:range</TT><A NAME="SIGSPEC_keyword.timeres:range"></A> is moved in steps the width of which is given by the keyword <TT>timeres:step</TT><A NAME="SIGSPEC_keyword.timeres:step"></A> from the beginning of the time series to the end.<A NAME="tex2html25"
+  HREF="footnode.html#foot1305"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> Consecutive time intervals are free to overlap. Time series data within such an interval are used to form a subset for which the analysis is performed. In addition, statistical weights may be applied to the subset data, all with respect to the centre of the interval, which shall be denoted <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$t_C$">.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The only exception is the keyword <TT>timeres:w:damp</TT>. In this case, the analysis is optimised for signal excited at the beginning of the time interval corresponding to the subset under consideration, <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$t_B$"> and exponentially damped towards the end of the subset.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The weight functions of time are given in Table<A HREF="#SIGSPEC_TABwts"><I>1</I></A>. The normalisation of weights is automatically performed by S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL>. Also the combination of a weight function for time-resolved mode with weights columns (keyword <TT>col:weights</TT>) is supported.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>In time-resolved mode, the set of output files as given in ``Default Output'', p.<A HREF="node19.html#SIGSPEC_Default_Output"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, is generated for each subset of the time series. This requires the introduction of an additional six-digit index, <TT>#interval#</TT>, in addition to <TT>#iteration#</TT>, and the annotation for the output files is
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI><TT>wts.#interval#.dat</TT> for the weight function vs.&nbsp;time in each subset,
+</LI>
+<LI><TT>s#iteration#.#interval#.dat</TT> for the spectra,
+</LI>
+<LI><TT>t#iteration#.#interval#.dat</TT> for the residuals after each step of prewhitening,
+</LI>
+<LI><TT>r#iteration#.#interval#.dat</TT> for the results after each step of prewhitening,
+</LI>
+<LI><TT>m#index#.#interval#.dat</TT> for the results after each step of prewhitening,
+</LI>
+<LI><TT>result.#interval#.dat</TT> for the result files, each with a list of significant signal components,
+</LI>
+<LI><TT>residuals.#interval#.dat</TT> for the final residuals after the prewhitening of all significant signal components,
+</LI>
+<LI><TT>resspec.#interval#.dat</TT> for the residual spectrum after the prewhitening of all significant signal components,
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+The column syntax is strictly consistent with the time-unresolved versions (see ``Default Output'', p.<A HREF="node19.html#SIGSPEC_Default_Output"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). The additional files, <TT>wts.#interval#.dat</TT>, are in two-column format. The first column represents the time values in the corresponding subset, the second column contains the weight function without normalisation.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Furthermore, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> generates a file <TT>t000000.#interval#.dat</TT>, which contains the part of the original time series which is actually used as input.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Special functions - as introduced in ``Analysis of the Time-domain Sampling'' (p.<A HREF="node23.html#SIGSPEC_Analysis_of_the_Time-domain_Sampling"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), ``Preview'' (p.<A HREF="node31.html#SIGSPEC_Preview"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), and ``Correlograms'' (p.<A HREF="node32.html#SIGSPEC_Correlograms"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>) - are also supplied with the <TT>#interval#</TT> index, i.e.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI><TT>win.#interval#.dat</TT> for the amplitude windows,
+</LI>
+<LI><TT>profile.#interval#.dat</TT> for the sampling profiles,
+</LI>
+<LI><TT>sock.#interval#.dat</TT> for the Sock Diagrams,
+</LI>
+<LI><TT>phdist.#interval#.dat</TT> for the phase distribution diagrams,
+</LI>
+<LI><TT>preview.#interval#.dat</TT> for the previews,
+</LI>
+<LI><TT>c#iteration#.#interval#.dat</TT> for the correlograms after each step of prewhitening,
+</LI>
+<LI><TT>rescorr.#interval#.dat</TT> for the final correlograms after the prewhitening of all significant signal components.
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_timeres.dat"></A><A NAME="3957"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>19</I>:</STRONG>
+Time series used for the sample project <TT>timeres</TT>, representing 14 nights of Str&#248;mgren <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$y$"> photometry of the Delta Scuti star 4CVn, acquired in February and March, 2007.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="494" HEIGHT="383" ALIGN="BOTTOM" BORDER="0"
+ SRC="img113.png"
+ ALT="\includegraphics[clip,angle=0,width=109mm, clip]{eps/timeres.dat.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B><A NAME="SIGSPEC_timeres.ex"></A> <I>The sample project <TT>timeres</TT> illustrates the time-resolved analysis using Str&#248;mgren y photometry of the Delta Scuti star 4CVn acquired with the Vienna University Automatic Photoelectric Telescope (Strassmeier et al.1997). The data represent 16 nights from February 21 to March 16, 2007, and are displayed in Fig.<A HREF="#SIGSPEC_timeres.dat"><I>19</I></A><I>.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_timeres.s"></A><A NAME="3963"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>20</I>:</STRONG>
+Time-resolved significance spectra for 14 subsets (from <EM>top</EM> to <EM>bottom</EM>) automatically generated in the sample project <TT>timeres</TT>. in each panel, the significance spectrum of the full dataset is displayed in <EM>grey</EM> colour for comparison.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="436" HEIGHT="570" ALIGN="BOTTOM" BORDER="0"
+ SRC="img114.png"
+ ALT="\includegraphics[clip,angle=0,width=96mm, clip]{eps/timeres.s.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The file <TT>timeres.ini</TT> contains the specifications
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+timeres:range 10
+timeres:step 1
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>which provide a 10-day interval moving over the time base of 24 days, with one-day steps. The resulting 14 subsets are represented by the files <TT>timeres/t000000.000000.dat</TT> to <TT>timeres/t000000.000013.dat</TT>. Gaussian weight functions with a standard deviation of 5 days are applied:
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+timeres:w:gauss 5
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The files <TT>timeres/wts.000000.dat</TT> to <TT>timeres/wts.000013.dat</TT> contain the weights applied to each datapoint within each subset. Further output files are
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<UL>
+<LI><TT>timeres/s000000.######.dat</TT> for the significance spectra of the original time series without prewhitening (Fig.<A HREF="#SIGSPEC_timeres.s"><I>20</I></A><I>,
+</LI>
+<LI><TT>timeres/result.######.dat</TT> for the lists of significant signal components,
+</LI>
+<LI><TT>timeres/residuals.######.dat</TT> for the residual time series after all prewhitening steps (divided into subsets according to the time intervals), and
+</LI>
+<LI><TT>timeres/resspec.######.dat</TT> for the significance spectra of residuals.
+</LI>
+</UL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+Here <TT>######</TT> denotes six-digit numbers ranging from <TT>000000</TT> to <TT>000013</TT>.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html871"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html867"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html861"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html869"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html872"
+  HREF="node34.html">SIGSPEC AntiAlC: Anti-aliasing Correction</A>
+<B> Up:</B> <A NAME="tex2html868"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html862"
+  HREF="node32.html">Correlograms</A>
+ &nbsp; <B>  <A NAME="tex2html870"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

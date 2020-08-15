@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>SIGSPEC AntiAlC: Anti-aliasing Correction Mode</TITLE>
+<META NAME="description" CONTENT="SIGSPEC AntiAlC: Anti-aliasing Correction Mode">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node35.html">
+<LINK REL="previous" HREF="node33.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node35.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html883"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html879"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html873"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html881"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html884"
+  HREF="node35.html">Analysis of Harmonics</A>
+<B> Up:</B> <A NAME="tex2html880"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html874"
+  HREF="node33.html">Time-resolved Analysis</A>
+ &nbsp; <B>  <A NAME="tex2html882"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION002110000000000000000"></A><A NAME="SIGSPEC_AntiAlC"></A>
+<BR>
+S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> AntiAlC: Anti-aliasing Correction Mode
+</H1><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>In AntiAlC mode, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> does not follow a strict step-by-step prewhitening sequence. Instead, test runs are performed for a number of candidate peaks in the significance spectrum in order to find the solution that produces a minimum residual rms scatter after a user-given number of prewhitenings.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<OL>
+<LI>All peaks above a given sig limit are taken into consideration. The keyword <TT>antialc:par</TT><A NAME="SIGSPEC_keyword.antialc:par"></A> in the <TT>.ini</TT> file is followed by a floating-point number. This quantity is the AntiAlC parameter <IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.png"
+ ALT="$p_\mathrm{al}$">, which has to attain a value in the interval <!-- MATH
+ $\left] 0,1\right]$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.png"
+ ALT="$\left] 0,1\right]$">. If the highest sig in the considered frequency range is <!-- MATH
+ $\max\left[\mathrm{sig}\left( A\right)\right]$
+ -->
+<IMG
+ WIDTH="91" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.png"
+ ALT="$\max\left[\mathrm{sig}\left( A\right)\right]$">, then the sig limit is <!-- MATH
+ $p_\mathrm{al}\max\left[\mathrm{sig}\left( A\right)\right]$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$p_\mathrm{al}\max\left[\mathrm{sig}\left( A\right)\right]$">. I.e., the AntiAlC parameter determines the sig limit for the candidate peak selection relative to the highest peak in the spectrum under consideration. Alternatively or in addition, a sig threshold for the AntiAlC candidate selection may be defined using the keyword <TT>antialc:siglimit</TT><A NAME="SIGSPEC_keyword.antialc:siglimit"></A>. If neither <TT>antialc:par</TT> nor <TT>antialc:siglimit</TT> are present, the sig limit specified by <TT>siglimit</TT> in the <TT>.ini</TT> file (p.<A HREF="node18.html#SIGSPEC_Program_termination"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>) is used for the AntiAlC candidate selection also.
+</LI>
+<LI>The candidate selection is performed for each step in the test prewhitening sequence.
+</LI>
+<LI>The resulting procedure is the computation of all combinations of candidate peaks above a sig threshold determined by the AntiAlC parameter. The number of iterations for these test prewhitenings is determined by the keyword <TT>antialc:depth</TT><A NAME="SIGSPEC_keyword.antialc:depth"></A>, followed by an integer value. It specifies the depth of the AntiAlC computation.
+</LI>
+<LI>The successful combination of peaks is selected upon the minimum residual rms deviation out of all examined combinations.
+</LI>
+<LI>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> does not necessarily adopt all iterations performed in the test run for the main prewhitening cascade. The integer value following the keyword <TT>antialc:adopt</TT><A NAME="SIGSPEC_keyword.antialc:adopt"></A> determines how many prewhitening steps shall be adopted. This quantity must not exceed the computation depth provided by the keyword <TT>antialc:depth</TT>. If the limits specified by the keywords <TT>iterations</TT>, <TT>siglimit</TT>, or <TT>csiglimit</TT> are reached, the output may even terminate before the number specified by the keyword <TT>antialc:adopt</TT>.
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>According to Reegen&nbsp;(2007), the expected sig is approximately proportional to the squared amplitude, if all influences by the time-domain sampling are neglected. The combination of <IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$n$"> sinusoidal signal components interacting via aliasing is expected to produce a maximum amplitude that does not exceed the sum of amplitudes of the sinusoidal components. Consequently, the square root of the sig of such a combination, <!-- MATH
+ $\mathrm{sig}_\mathrm{al}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.png"
+ ALT="$\mathrm{sig}_\mathrm{al}$">, is very likely below the sum of square roots of individual sigs <!-- MATH
+ $\mathrm{sig}_n$
+ -->
+<IMG
+ WIDTH="32" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img120.png"
+ ALT="$\mathrm{sig}_n$">,
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sqrt{\mathrm{sig}_\mathrm{al}} < \sum _n\sqrt{\mathrm{sig}_n}\: .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="141" HEIGHT="44" BORDER="0"
+ SRC="img121.png"
+ ALT="\begin{displaymath}
+\sqrt{\mathrm{sig}_\mathrm{al}} &lt; \sum _n\sqrt{\mathrm{sig}_n}\: .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+If these all are assumed equal and denoted <!-- MATH
+ $\mathrm{sig}_\mathrm{ind}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$\mathrm{sig}_\mathrm{ind}$">, then the upper sig limit for the alias is <!-- MATH
+ $\mathrm{sig}_\mathrm{ind}\sqrt{n}$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$\mathrm{sig}_\mathrm{ind}\sqrt{n}$">. In other words, if a given peak with a sig <!-- MATH
+ $\mathrm{sig}_\mathrm{al}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.png"
+ ALT="$\mathrm{sig}_\mathrm{al}$"> is an alias of a combination of <IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$n$"> signal components with unique sigs <!-- MATH
+ $\mathrm{sig}_\mathrm{ind}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$\mathrm{sig}_\mathrm{ind}$">, then the individual significances are probably higher than <!-- MATH
+ $\frac{\mathrm{sig}_\mathrm{al}}{\sqrt{n}}$
+ -->
+<IMG
+ WIDTH="33" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$\frac{\mathrm{sig}_\mathrm{al}}{\sqrt{n}}$">. In terms of the AntiAlC parameter, one obtains
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+n \approx \frac{1}{\sqrt{p_\mathrm{al}}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="66" HEIGHT="44" BORDER="0"
+ SRC="img125.png"
+ ALT="\begin{displaymath}
+n \approx \frac{1}{\sqrt{p_\mathrm{al}}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+for the approximate number of signal components that can be assigned alias-free for a given AntiAlC parameter <IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.png"
+ ALT="$p_\mathrm{al}$">. Based on these considerations, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> evaluates the AntiAlC computation depth using the AntiAlC parameter, if the keyword <TT>antialc:depth</TT> is not provided in the <TT>.ini</TT> file.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The AntiAlC mode produces additional screen output, if a combination of candidate peaks yields a lower residual scatter than the previous minimum, a two-line screen message is returned. The first line is a set of indices. In the example below, the AntiAlC parameter (keyword <TT>antialc:par</TT>) is set <IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$0.5$">, and the AntiAlC computation depth (keyword <TT>antialc:depth</TT>) is <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.png"
+ ALT="$3$">. Correspondingly, the first line of output applies to the first of altogether ten candidate peaks in the first iteration, the first out of three in the second iteration, and the first out of seven in the third iteration. This peak constellation produces an rms deviation of residuals as displayed in the second line of output (in the example <!-- MATH
+ $0.00\,405\,851$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img126.png"
+ ALT="$0.00\,405\,851$">). After finishing the test cascade, the number of iterations specified by the keyword <TT>antialc:adopt</TT> (in the present example, this number is <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$2$">) is adopted for the main cascade. The screen output produced by the main cascade is the same as for a normal S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> prewhitening cascade without AntiAlC. The files containing spectra and residuals, respectively, are updated each time the residual rms deviation improves.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_antialc.dat"></A><A NAME="3972"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>21</I>:</STRONG>
+Time series used for the sample project <TT>antialc</TT> (<EM>dots</EM>). The sampling represents 14 nights of Str&#248;mgren <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$y$"> photometry of the <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$\delta $">Sct star 4CVn, acquired in February and March, 2007. The magnitude values are synthesized forming two sinusoidal signals (<EM>solid line</EM>) plus Gaussian noise. </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="494" HEIGHT="384" ALIGN="BOTTOM" BORDER="0"
+ SRC="img127.png"
+ ALT="\includegraphics[clip,angle=0,width=109mm, clip]{eps/antialc.dat.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B><A NAME="tex2html29"
+  HREF="footnode.html#foot3635"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> <I>The sample project <TT>antialc</TT> illustrates the anti-aliasing correction using the same sampling as the data for the sample project <TT>timeres</TT> (p.<A HREF="node33.html#SIGSPEC_timeres.ex"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), 
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI>a sinusoid with frequency 6.5598 cycles per day, amplitude 7.29 mmag,
+</LI>
+<LI>a sinusoid with frequency 8.5637 cycles per day, amplitude 6.87 mmag,
+</LI>
+<LI>Gaussian noise with 7.36 mmag rms deviation,
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+as displayed in Fig.<A HREF="#SIGSPEC_antialc.dat"><I>21</I></A> <I>. The two signal frequencies differ by almost exactly 2 cycles per day and may easily be misidentified as aliases of each other. There are two identical versions of the light curve provided for comparison: <TT>alc.dat</TT> and <TT>antialc.dat</TT>.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<DIV ALIGN="CENTER"><A NAME="SIGSPEC_antialc.s"></A><A NAME="3980"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure <I>22</I>:</STRONG>
+Fourier spectra for the sample project <TT>antialc</TT>. <EM>Left:</EM> significance spectrum. <EM>Right:</EM> DFT amplitudes.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER"><IMG
+ WIDTH="498" HEIGHT="182" ALIGN="BOTTOM" BORDER="0"
+ SRC="img128.png"
+ ALT="\includegraphics[clip,angle=0,width=110mm, clip]{eps/antialc.s.eps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The file <TT>alc.dat</TT> corresponds to the project directory <TT>alc</TT>, representing a normal S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> run without a file <TT>alc.ini</TT>. Running <TT>SigSpec alc</TT>, the resulting frequencies (screen output) are
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><PRE>
+   1 freq 7.55917  sig 55.8792  rms 10.0617  csig 55.8792
+   2 freq 5.55706  sig 31.5539  rms 8.65888  csig 31.5539
+   3 freq 10.5668  sig 11.011  rms 7.81469  csig 11.011
+   4 freq 2.55231  sig 4.9934  rms 7.60001  csig 4.9934
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Instead of the two signal components, 1-cycle-per-day aliases are identified. The significance and Fourier amplitude spectra of the dataset show the highest peak at 7.56 cycles per day, which represents a superposition of the first upper side peak of the signal at 6.56 cycles per day and the first lower side peak of the signal at 8.56 cycles per day (Fig.<A HREF="#SIGSPEC_antialc.s"><I>22</I></A><I>. This leads to an imperfect prewhitening of the two components, and the remaining signal is detected as a third component at 9.56 cycles per day.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The alternative AntiAlC analysis is provided by the file <TT>antialc.ini</TT>, which contains the specifications
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+antialc:par 0.5
+antialc:depth 2
+antialc:adopt 1
+antialc:siglimit 4
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>All peaks that reach at least 50% of the highest significance in the spectrum are taken into account. S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> computes two consecutive iterations, but adopts only the first of these two iterations. A sig limit of 4 is assumed for the AntiAlC calculations (contrary to the default sig limit of 5 still valid as a breakup condition for the whole procedure). Running <TT>SigSpec antialc</TT>, the screen output is
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+   1 freq 8.56173  sig 51.5953  rms 10.0617  csig 51.5953
+   2 freq 6.55846  sig 46.0406  rms 8.77437  csig 46.0406
+   3 freq 33.7204  sig 3.9725  rms 7.48075  csig 3.9725
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Both signals are recovered at a reasonable frequency accuracy. Moreover, according to the file <TT>antialc/result.dat</TT>, the amplitudes of the two signals are recovered to a satisfactory precision (7.22 mmag, 6.47 mmag).</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html883"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html879"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html873"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html881"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html884"
+  HREF="node35.html">Analysis of Harmonics</A>
+<B> Up:</B> <A NAME="tex2html880"
+  HREF="node2.html">SigSpec User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html874"
+  HREF="node33.html">Time-resolved Analysis</A>
+ &nbsp; <B>  <A NAME="tex2html882"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

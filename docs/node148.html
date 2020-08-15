@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Amplitude transformation</TITLE>
+<META NAME="description" CONTENT="Amplitude transformation">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="previous" HREF="node145.html">
+<LINK REL="up" HREF="node142.html">
+<LINK REL="next" HREF="node149.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2370"
+  HREF="node149.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2366"
+  HREF="node142.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2362"
+  HREF="node147.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2368"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2371"
+  HREF="node149.html">Composed Mode</A>
+<B> Up:</B> <A NAME="tex2html2367"
+  HREF="node142.html">Conditional Mode</A>
+<B> Previous:</B> <A NAME="tex2html2363"
+  HREF="node147.html">Spectral significance threshold</A>
+ &nbsp; <B>  <A NAME="tex2html2369"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00372000000000000000"></A><A NAME="CINDERELLA_Amplitude_transformation"></A>
+<BR>
+Amplitude transformation
+</H2><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The assumption that instrumental and environmental artifacts use to be additive in terms of intensity may create needs to transform amplitudes in mag from the comparison into the target spectra, if the conditional C<SMALL>INDERELLA</SMALL> mode is applied. The amplitude transformation is only performed to obtain conditional sigs.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Three different strategies to adjust comparison amplitudes are offered, according to the specifications in the <TT>.cnd</TT> file.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I>
+<UL>
+<LI>In photometry, the photon statistics may be employed to transform comparison into target amplitudes, if the mean magnitudes of the stars are known (Reegen et al.&nbsp;2008). If the keyword <TT>transam:mean</TT><A NAME="CINDERELLA_keyword.transam:mean"></A> is provided in the <TT>.cnd</TT> file, C<SMALL>INDERELLA</SMALL> uses the mean observables <!-- MATH
+ $\left< m_C\right>$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img227.png"
+ ALT="$\left&lt; m_C\right&gt;$">, <!-- MATH
+ $\left< m_T\right>$
+ -->
+<IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img228.png"
+ ALT="$\left&lt; m_T\right&gt;$"> of the comparison and target time series, respectively, to transform the comparison amplitude <IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img229.png"
+ ALT="$A_C$"> into a target amplitude <IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$A_T$"> according to
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A_T = 2.5\log\left[ 1 + \frac{10^{-0.4\left(\left< m_C\right> - A_C\right)} - 10^{-0.4\left< m_C\right>}}{10^{-0.4\left< m_T\right>}}\right]\: .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="CINDERELLA_EQtransam_mean"></A><IMG
+ WIDTH="352" HEIGHT="46" BORDER="0"
+ SRC="img230.png"
+ ALT="\begin{displaymath}
+A_T = 2.5\log\left[ 1 + \frac{10^{-0.4\left(\left&lt; m_C\right...
+...-0.4\left&lt; m_C\right&gt;}}{10^{-0.4\left&lt; m_T\right&gt;}}\right]\: .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(32)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+</LI>
+<LI>If the keyword <TT>transam:rms</TT><A NAME="CINDERELLA_keyword.transam:rms"></A> is specified in the <TT>.cnd</TT> file, C<SMALL>INDERELLA</SMALL> interprets the residual rms errors <IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img231.png"
+ ALT="$\sigma _C$">, <IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img232.png"
+ ALT="$\sigma _T$"> of the comparison and target time series<A NAME="tex2html52"
+  HREF="footnode.html#foot3070"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>, respectively, as measures of the photon noise levels and evaluates the transformed amplitude according to
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A_T = 2.5\log\left[ 1 + \frac{\sigma _C^2}{\sigma _T^2}\left( 10^{0.4\,A_C} - 1\right)\right]\: .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="CINDERELLA_EQtransam_rms"></A><IMG
+ WIDTH="266" HEIGHT="46" BORDER="0"
+ SRC="img233.png"
+ ALT="\begin{displaymath}
+A_T = 2.5\log\left[ 1 + \frac{\sigma _C^2}{\sigma _T^2}\left( 10^{0.4\,A_C} - 1\right)\right]\: .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(33)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+</LI>
+<LI>The keyword <TT>transam:ppsc</TT><A NAME="CINDERELLA_keyword.transam:ppsc"></A> in the <TT>.cnd</TT> file causes C<SMALL>INDERELLA</SMALL> to use Eq.<A HREF="#CINDERELLA_EQtransam_rms"><I>5</I></A> employing residual point-to-point scatter instead of residual rms error for both <IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img231.png"
+ ALT="$\sigma _C$"> and <IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img232.png"
+ ALT="$\sigma _T$">.
+</LI>
+<LI>If the keyword <TT>transam:none</TT><A NAME="CINDERELLA_keyword.transam:none"></A> is specified in the <TT>.cnd</TT> file, no amplitude transformation is performed at all, i.e., C<SMALL>INDERELLA</SMALL> assumes <IMG
+ WIDTH="70" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.png"
+ ALT="$A_T = A_C$">.
+</LI>
+</UL><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>transam-mean</TT> contains the same input as the project <TT>CinderellaNative</TT> (p.<A HREF="node134.html#CINDERELLA_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). The time series data are considered to represent millimag photometry. The comparison dataset is assumed to refer to a 5 mag star, whereas the target datasets shall correspond to a 15 mag star. The resulting time series input files are <TT>000000.transam-mean.dat</TT> <TT>000001.transam-mean.dat</TT> to <TT>000008.transam-mean.dat</TT>. The keyword
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+transam:mean
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>in the file <TT>transam-mean.cnd</TT> forces C<SMALL>INDERELLA</SMALL> to employ the mean magnitudes of the datasets for the amplitude transformation.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>CinderellaNative</TT> contains an amplitude transformation based on the rms residual, which is the default method.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>transam-ppsc</TT> contains the same input as <TT>CinderellaNative</TT> (p.<A HREF="node134.html#CINDERELLA_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). The line
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+transam:ppsc
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>in the file <TT>transam-ppsc.cnd</TT> forces C<SMALL>INDERELLA</SMALL> to employ the residual point-to-point scatters of the datasets for the amplitude transformation.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>transam-none</TT> contains the same input as <TT>CinderellaNative</TT> (p.<A HREF="node134.html#CINDERELLA_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). The line
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+transam:none
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>in the file <TT>transam-none.cnd</TT> switches off the amplitude transformation.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2370"
+  HREF="node149.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2366"
+  HREF="node142.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2362"
+  HREF="node147.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2368"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2371"
+  HREF="node149.html">Composed Mode</A>
+<B> Up:</B> <A NAME="tex2html2367"
+  HREF="node142.html">Conditional Mode</A>
+<B> Previous:</B> <A NAME="tex2html2363"
+  HREF="node147.html">Spectral significance threshold</A>
+ &nbsp; <B>  <A NAME="tex2html2369"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

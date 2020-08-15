@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Limit of harmonic order</TITLE>
+<META NAME="description" CONTENT="Limit of harmonic order">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node175.html">
+<LINK REL="previous" HREF="node173.html">
+<LINK REL="up" HREF="node171.html">
+<LINK REL="next" HREF="node175.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2718"
+  HREF="node175.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2714"
+  HREF="node171.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2708"
+  HREF="node173.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2716"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2719"
+  HREF="node175.html">Equivalent sig</A>
+<B> Up:</B> <A NAME="tex2html2715"
+  HREF="node171.html">How COMBINE Works</A>
+<B> Previous:</B> <A NAME="tex2html2709"
+  HREF="node173.html">Frequency resolution</A>
+ &nbsp; <B>  <A NAME="tex2html2717"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00443000000000000000"></A><A NAME="COMBINE_Limit_of_harmonic_order"></A>
+<BR>
+Limit of harmonic order
+</H2>
+<P>
+<I><I>The range of harmonic orders is restricted by the parameter N, which is calculated according to
+</I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+N=\mathrm{ceil}\left(\sqrt{\Omega\frac{\mathrm{sig}_{k}}{\mathrm{sig}_{K}}}\right)\: ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="COMBINE_EQ_N"></A><IMG
+ WIDTH="159" HEIGHT="56" BORDER="0"
+ SRC="img246.png"
+ ALT="\begin{displaymath}
+N=\mathrm{ceil}\left(\sqrt{\Omega\frac{\mathrm{sig}_{k}}{\mathrm{sig}_{K}}}\right)\: ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(37)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I>
+where <!-- MATH
+ $\mathrm{sig}_{k}$
+ -->
+<IMG
+ WIDTH="31" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img247.png"
+ ALT="$\mathrm{sig}_{k}$"> denotes the sig associated to the frequency <IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img239.png"
+ ALT="$f_{k}$"> and <!-- MATH
+ $\mathrm{sig}_K$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img248.png"
+ ALT="$\mathrm{sig}_K$"> is the sig associated to the last frequency in the input file, <IMG
+ WIDTH="24" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img249.png"
+ ALT="$f_K$">. If the keyword <TT>csig</TT> is set, the csig is consistently taken instead of the sig. The parameter <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.png"
+ ALT="$\Omega$"> is provided by the keyword <TT>order</TT><A NAME="COMBINE_keyword.order"></A> in the file <TT>&lt;infile&gt;.ini</TT>, followed by a floating-point number. The default value is <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$1$">. Given the limit <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$N$">, the coefficients of a linear combinations are restricted to indices from <IMG
+ WIDTH="31" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img250.png"
+ ALT="$-N$"> to <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$N$"> according to
+</I></I>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+c_{k}=-N,\ldots,N
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="116" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img251.png"
+ ALT="$\displaystyle c_{k}=-N,\ldots,N$"></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(38)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P><I><I>.
+</I></I>
+<P>
+<BR><HR>
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Output</TITLE>
+<META NAME="description" CONTENT="Output">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node178.html">
+<LINK REL="previous" HREF="node171.html">
+<LINK REL="up" HREF="node167.html">
+<LINK REL="next" HREF="node178.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2752"
+  HREF="node178.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2748"
+  HREF="node167.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2742"
+  HREF="node176.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2750"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2753"
+  HREF="node178.html">Order of Input Rows</A>
+<B> Up:</B> <A NAME="tex2html2749"
+  HREF="node167.html">Combine User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2743"
+  HREF="node176.html">Reliability and sensitivity</A>
+ &nbsp; <B>  <A NAME="tex2html2751"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00450000000000000000"></A><A NAME="COMBINE_Output"></A>
+<BR>
+Output
+</H1>
+<P>
+<I><I>Genuine frequencies are assigned identifiers <TT>f#index#</TT>, where <TT>#index#</TT> denotes an integer number starting at <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$1$">. According to the number of significant signals present in the file <TT>&lt;infile&gt;</TT>, C<SMALL>OMBINE</SMALL> chooses a constant number of digits. For example, if the input file contains from <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$1$"> to <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$9$"> frequencies, the identifiers for genuine frequencies are <TT>f1</TT>, <TT>f2</TT>, ... If the input file contains from <IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$10$"> to <IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img260.png"
+ ALT="$99$"> frequencies, C<SMALL>OMBINE</SMALL> enumerates the genuine components <TT>f01</TT>, <TT>f02</TT>, ..., and so on. This format convention applies to the indexing of rows also.
+</I></I>
+<P>
+<I><I>Linear combinations are denoted by the frequency identifiers of the genuine components and appear as a formula: if the frequency under consideration is, e.g., <!-- MATH
+ $f_1+3f_3-2f_{10}-f_{14}-0.00214$
+ -->
+<IMG
+ WIDTH="223" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.png"
+ ALT="$f_1+3f_3-2f_{10}-f_{14}-0.00214$">, C<SMALL>OMBINE</SMALL> displays it as <TT>f01+3f02-2f10-f14-0.00214</TT> both on the screen and in the output file. In this context, <IMG
+ WIDTH="69" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img262.png"
+ ALT="$-0.00214$"> is the frequency accuracy.
+</I></I>
+<P>
+<I><I>The screen output consists of a single line for each signal (i.e., for each row in the input file). C<SMALL>OMBINE</SMALL> displays
+</I></I>
+<OL>
+<LI>the row index,
+</LI>
+<LI>the linear combination including the frequency accuracy, and
+</LI>
+<LI>the reliability <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img259.png"
+ ALT="$R$"> (Eq.<A HREF="node176.html#COMBINE_EQ_relsens"><I>6</I></A>).
+</LI>
+</OL><I><I>
+For genuine frequencies, C<SMALL>OMBINE</SMALL> displays only the row index and the frequency identifier. At runtime, the most reliable linear combination identified so far is displayed. If C<SMALL>OMBINE</SMALL> finds a ``better'' solution, the line on the screen is updated.
+</I></I>
+<P>
+<I><I>By default, C<SMALL>OMBINE</SMALL> generates an output file <TT>&lt;infile&gt;.cmb</TT>. It contains a row index in the first column, then all information of the input file in the further columns, plus three additional columns at the end:
+</I></I>
+<OL>
+<LI>reliability <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img259.png"
+ ALT="$R$"> (Eq.<A HREF="node176.html#COMBINE_EQ_relsens"><I>6</I></A>)<A NAME="tex2html55"
+  HREF="footnode.html#foot3377"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>,
+</LI>
+<LI>total number of linear combinations within the frequency resolution,
+</LI>
+<LI>the linear combination itself, plus the frequency accuracy. If a frequency is considered genuine, only the frequency identifier is displayed.
+</LI>
+</OL>
+<P>
+<I><I>For convenience, a second output file <TT>&lt;infile&gt;.gen</TT> is produced by C<SMALL>OMBINE</SMALL>. It is truncated to the genuine frequencies only and contains the row index in the first column, then all the information provided in the input file, plus the frequency identifier in the last column. The columns for the reliability and the number of linear combinations within the frequency resolution are omitted. This file provides the opportunity to have all the genuine frequencies available at a glance.
+</I></I>
+<P>
+<I><I>
+<BR>
+<BR><B>Example.</B><A NAME="tex2html56"
+  HREF="footnode.html#foot3721"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> <I>The sample project <TT>CombineNative</TT> contains a list of significant frequencies found in the MOST<A NAME="tex2html57"
+  HREF="footnode.html#foot3385"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> (Microvariability &amp; Oscillations of STars) photometry of <IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img106.png"
+ ALT="$\zeta$"> Oph (Walker et al.&nbsp;2003, 2004, 2005). According to the input file <TT>result.dat</TT>, altogether 294 formally significant signal components (sig <IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img215.png"
+ ALT="$&gt;$"> 5) were identified.
+</I></I></I>
+<P>
+<I><I><I>The file <TT>result.dat.ini</TT> contains five keywords:
+</I></I></I>
+<P>
+<I></I><PRE>
+order 0.2
+dt 26
+decay 1.5
+cdamp 10
+sens 0.2
+</PRE><I></I>
+<P>
+<I><I><I>The dataset is 26 days long, and the frequencies are provided in cycles per day. Thus C<SMALL>OMBINE</SMALL> will assume a Rayleigh frequency resolution of 0.03846 cycles per day. There is no specification for the frequency tolerance parameter (keyword <TT>tol</TT>). Thus the default setting 0 is used.
+</I></I></I>
+<P>
+<I><I><I>Running C<SMALL>OMBINE</SMALL> by typing the command line <TT>Combine result.dat</TT> yields a welcome message on the screen.
+</I></I></I>
+<P>
+<I></I><PRE>
+ CCCCCC                   bb      ii                 
+CC    CC                  bb                         
+CC        ooooo  m mm mm  bb bbb  ii n nnnn   eeeee  
+CC       oo   oo mm mm mm bbb  bb ii nn   nn ee   ee 
+CC       oo   oo mm mm mm bb   bb ii nn   nn ee   ee 
+CC       oo   oo mm mm mm bb   bb ii nn   nn eeeeeee 
+CC       oo   oo mm mm mm bb   bb ii nn   nn ee      
+CC    CC oo   oo mm mm mm bb   bb ii nn   nn ee   ee 
+ CCCCCC   ooooo  mm mm mm b bbbb  ii nn   nn  eeeee  
+
+
+Version 1.0
+************************************************************
+by Piet Reegen
+Institute of Astronomy
+University of Vienna
+Tuerkenschanzstrasse 17
+1180 Vienna, Austria
+Release date: August 18, 2009
+</PRE><I></I>
+<P>
+<I><I><I>The program finds out that the input file is a seven-column S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result file, determines the number of rows and reads the input data. Note that 295 rows correspond to 294 significant signal components, because the last row in the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result file contains information on the residuals (see S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> manual, p.<A HREF="node22.html#SIGSPEC_Result_files"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</I></I></I>
+<P>
+<I></I><PRE>
+*** start **************************************************
+
+File result.dat: SigSpec format
+rows                                    295
+read input file
+</PRE><I></I>
+<P>
+<I><I><I>Then the search for linear combinations starts. For each row in the input file, C<SMALL>OMBINE</SMALL> displays the most reliable combination detected so far.
+</I></I></I>
+<P>
+<I><I><I>The first four signal components are found to be genuine. Since the number of signal components is 294, C<SMALL>OMBINE</SMALL> uses a three-digit format for the row indices and frequency identifiers.
+</I></I></I>
+<P>
+<I></I><PRE>
+row 001: f001
+row 002: f002
+row 003: f003
+row 004: f004
+</PRE><I></I>
+<P>
+<I><I><I>For rows 5 and 6 in the input data, the screen output contains the most reliable linear combination (including the frequency accuracy) and the reliability.
+</I></I></I>
+<P>
+<I></I><PRE>
+row 005: 3f001-f002-2f003-f004+0.0284306 0.236585
+row 006: 3f001+2f002-f004+0.0136421 0.35803
+</PRE><I></I>
+<P>
+<I><I><I>An examination of the output file <TT>result.dat.cmb</TT> shows that rows <TT>005</TT> and <TT>006</TT> end with
+</I></I></I>
+<P>
+<I></I><PRE>
+0.2365853347754522  1 3f001-f002-2f003-f004+0.0284306168856169
+0.3580304203945811  2 3f001+2f002-f004+0.0136420746028509
+</PRE><I></I>
+<P>
+<I><I><I>These entries refer to the columns added by C<SMALL>OMBINE</SMALL>. The first value is the reliability, the second one is the number of examined linear combinations, and the last column represents the linear combination itself. For row <TT>005</TT>, there is only one linear combination available within the frequency resolution, for row <TT>006</TT> the number of linear combinations taken into account is 2.
+</I></I></I>
+<P>
+<I><I><I>Subsequently, the screen output indicates a fifth genuine frequency.
+</I></I></I>
+<P>
+<I></I><PRE>
+row 007: f005
+</PRE><I></I>
+<P>
+<I><I><I>The frequency in row number 8 is 0.02783 cycles per day, which is below the frequency resolution. Thus the component is considered to refer to zero frequency, and in this case, no reliability is evaluated.
+</I></I></I>
+<P>
+<I></I><PRE>
+row 008: 0+0.0278395
+</PRE><I></I>
+<P>
+<I><I><I>In the further rows of the input files, no more genuine frequencies are detected.
+</I></I></I>
+<P>
+<I></I><PRE>
+row 009: -f002+f005-0.025485 0.759005
+row 010: f001-f002-f004+f005+0.0313392 0.490535
+row 011: -f001+f004-0.00275538 1.26888
+row 012: f001-f002-f004+f005-0.0295542 0.680494
+row 013: -2f001+2f003+f004-0.00567519 0.523911
+row 014: -f001+f005+0.024731 1.72772
+row 015: 2f002+0.0249392 1.47442
+row 016: 2f001-f004-0.0100088 1.70761
+row 017: -f001+2f002-0.00217389 1.55951
+row 018: f001-f002+0.00824894 3.95466
+row 019: f002+f005-0.00668728 1.64167
+row 020: 2f002+f003-f005-0.00199182 0.779607
+</PRE><I></I>
+<P>
+<I><I><I>It is a remarkable matter of fact that C<SMALL>OMBINE</SMALL> is able to compose all 294 frequencies contained by the input file as linear combinations of no more than five genuine frequencies. However, a different parameter constellation in the configuration file <TT>result.dat.ini</TT> can produce completely different output. Note that the time consumption by C<SMALL>OMBINE</SMALL> dramatically increases with the number of genuine frequencies identified. This is because more genuine frequencies increase the number of possible linear combinations over-proportionally. A list of genuine frequencies only is found in the output file <TT>result.dat.gen</TT>.</I></I></I>
+<P>
+<I></I><I></I><PRE>
+5 genuine frequencies found.
+
+
+Finished.
+
+************************************************************
+
+Thank you for using Combine!
+Questions or comments?
+Please contact Piet Reegen (reegen@astro.univie.ac.at)
+Bye!
+</PRE><I></I>
+<P>
+<I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2752"
+  HREF="node178.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2748"
+  HREF="node167.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2742"
+  HREF="node176.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2750"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2753"
+  HREF="node178.html">Order of Input Rows</A>
+<B> Up:</B> <A NAME="tex2html2749"
+  HREF="node167.html">Combine User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2743"
+  HREF="node176.html">Reliability and sensitivity</A>
+ &nbsp; <B>  <A NAME="tex2html2751"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

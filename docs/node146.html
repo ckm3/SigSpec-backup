@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Frequency resolution</TITLE>
+<META NAME="description" CONTENT="Frequency resolution">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node147.html">
+<LINK REL="previous" HREF="node145.html">
+<LINK REL="up" HREF="node145.html">
+<LINK REL="next" HREF="node147.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2350"
+  HREF="node147.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2346"
+  HREF="node145.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2340"
+  HREF="node145.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2348"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2351"
+  HREF="node147.html">Spectral significance threshold</A>
+<B> Up:</B> <A NAME="tex2html2347"
+  HREF="node145.html">Candidate selection</A>
+<B> Previous:</B> <A NAME="tex2html2341"
+  HREF="node145.html">Candidate selection</A>
+ &nbsp; <B>  <A NAME="tex2html2349"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00371100000000000000"></A><A NAME="CINDERELLA_Frequency_resolution"></A>
+<BR>
+Frequency resolution
+</H3><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I>There are mainly two interpretations of the frequency resolution. It is either calculated as the inverse time interval width (Rayleigh frequency resolution),
+</I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\delta f := \frac{1}{T}\: ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="CINDERELLA_EQ_Rayleigh"></A><IMG
+ WIDTH="64" HEIGHT="38" BORDER="0"
+ SRC="img217.png"
+ ALT="\begin{displaymath}
+\delta f := \frac{1}{T}\: ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(29)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I>
+or as
+</I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\delta f := \frac{1}{T\sqrt{\mathrm{sig}\left( A\right)}}\: ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="CINDERELLA_EQ_Kallinger"></A><IMG
+ WIDTH="126" HEIGHT="45" BORDER="0"
+ SRC="img218.png"
+ ALT="\begin{displaymath}
+\delta f := \frac{1}{T\sqrt{\mathrm{sig}\left( A\right)}}\: ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(30)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I>
+where <!-- MATH
+ $\mathrm{sig}\left( A\right)$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img219.png"
+ ALT="$\mathrm{sig}\left( A\right)$"> denotes the sig of an amplitude <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$A$">. This definition is called Kallinger resolution (Kallinger, Reegen &amp; Weiss 2008).
+</I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I>In order to enhance the flexibility of C<SMALL>INDERELLA</SMALL>, the frequency resolution is computed as </I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\delta f := \frac{1}{T\sqrt{\mathrm{sig}\left( A\right)^{\tau}}}\: ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="CINDERELLA_EQ_fres"></A><IMG
+ WIDTH="134" HEIGHT="45" BORDER="0"
+ SRC="img220.png"
+ ALT="\begin{displaymath}
+\delta f := \frac{1}{T\sqrt{\mathrm{sig}\left( A\right)^{\tau}}}\: ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(31)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I>
+where the floating-point number <!-- MATH
+ $\tau\in\left[ 0,1\right]$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img221.png"
+ ALT="$\tau\in\left[ 0,1\right]$"> may be defined using the keyword <TT>tol</TT><A NAME="CINDERELLA_keyword.tol"></A> in the <TT>.cnd</TT> file. The special value <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img222.png"
+ ALT="$\tau = 0$"> transforms eq.<A HREF="#CINDERELLA_EQ_fres"><I>3</I></A> into eq.<A HREF="#CINDERELLA_EQ_Rayleigh"><I>1</I></A>, setting <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img223.png"
+ ALT="$\tau = 1$"> provides eq.<A HREF="#CINDERELLA_EQ_Kallinger"><I>2</I></A>.
+The default value is <IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img222.png"
+ ALT="$\tau = 0$">.
+</I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I>C<SMALL>INDERELLA</SMALL> checks for frequencies in the comparison datasets are within the frequency resolution around each frequency in the target dataset.
+</I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample <TT>cand</TT> contains the same input as <TT>CinderellaNative</TT> (p.<A HREF="node134.html#CINDERELLA_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), and the file <TT>cand.cnd</TT> contains the line
+</I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I></I><PRE>
+tol 2
+</PRE><I></I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I>The frequency tolerance parameter is increased compared to the default value 0, which means that the intervals taken into account to search for corresponding signal components are tendentially narrower. This setting is for demonstration only; in normal applications, only frequency tolerance parameters ranging from 0 to 1 will make sense.
+</I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I>The effect of this modification is visible, e.g., comparing the output files <TT>000001.cd.000000.dat</TT> of the project <TT>CinderellaNative</TT> to the project <TT>cand</TT>. In the project <TT>CinderellaNative</TT>, this file contains the line
+</I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I></I><PRE>
+58.3815412948909298 -8.8063413553403507 -5.6290446018702553
+</PRE><I></I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I>whereas the corresponding line in the project <TT>cand</TT> is
+</I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I></I><PRE>
+58.3815412948909298       2.1858505500938747       0.3972034177439077
+</PRE><I></I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I>In the project <TT>CinderellaNative</TT>, the 14th component in the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result file <TT>000001.result.dat</TT> in the project directory is related to the 47th component in the file <TT>000000.result.dat</TT>. The two frequencies differ by 0.054, and the Rayleigh frequency resolution of the target dataset is <IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$0.091$">, which is sufficient for a correspondence. In the project <TT>cand</TT>, the target sig of 2.387 becomes relevant. Eq.<A HREF="#CINDERELLA_EQ_fres"><I>3</I></A> <I>yields a frequency resolution 0.042 for this component, which is now too small for a coincidence. The corresponding line in the file <TT>000001.cd.000000.dat</TT> consistently indicates that no coincident peak is found for this signal component. In this case, C<SMALL>INDERELLA</SMALL> uses a default sig threshold for the comparison data, see ``Spectral significance threshold'', below.</I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2350"
+  HREF="node147.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2346"
+  HREF="node145.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2340"
+  HREF="node145.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2348"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2351"
+  HREF="node147.html">Spectral significance threshold</A>
+<B> Up:</B> <A NAME="tex2html2347"
+  HREF="node145.html">Candidate selection</A>
+<B> Previous:</B> <A NAME="tex2html2341"
+  HREF="node145.html">Candidate selection</A>
+ &nbsp; <B>  <A NAME="tex2html2349"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

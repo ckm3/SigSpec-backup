@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Spectral significance threshold</TITLE>
+<META NAME="description" CONTENT="Spectral significance threshold">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="previous" HREF="node146.html">
+<LINK REL="up" HREF="node145.html">
+<LINK REL="next" HREF="node148.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2360"
+  HREF="node148.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2356"
+  HREF="node145.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2352"
+  HREF="node146.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2358"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2361"
+  HREF="node148.html">Amplitude transformation</A>
+<B> Up:</B> <A NAME="tex2html2357"
+  HREF="node145.html">Candidate selection</A>
+<B> Previous:</B> <A NAME="tex2html2353"
+  HREF="node146.html">Frequency resolution</A>
+ &nbsp; <B>  <A NAME="tex2html2359"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00371200000000000000"></A><A NAME="CINDERELLA_Spectral_significance_threshold"></A>
+<BR>
+Spectral significance threshold
+</H3><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I>If no coincidence in a comparison dataset is detected for a given target frequency, i.e., if C<SMALL>INDERELLA</SMALL> does not find a valid candidate for this target frequency, a default value is used for the sig in the comparison dataset. The user may specify this C<SMALL>INDERELLA</SMALL> threshold by means of the keyword <TT>defsig</TT><A NAME="CINDERELLA_keyword.defsig"></A> in the <TT>.cnd</TT> file. The same specification may be set for the default csig<A NAME="tex2html51"
+  HREF="footnode.html#foot3020"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> using the keyword <TT>defcsig</TT><A NAME="CINDERELLA_keyword.defcsig"></A>. If one of these keywords is not provided, <!-- MATH
+ $\frac{\pi}{4}\log\mathrm{e} \approx 0.341$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img225.png"
+ ALT="$\frac{\pi}{4}\log\mathrm{e} \approx 0.341$"> is used correspondingly by default. According to Reegen&nbsp;(2007), this is the expected value of the sig for white noise. The underlying assumption is that the residuals after prewhitening of all significant signal components in the comparison dataset represent pure noise, i.e.&nbsp;do not contain any further unresolved signal.
+</I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample <TT>cand</TT> contains the same input as <TT>CinderellaNative</TT> (p.<A HREF="node134.html#CINDERELLA_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), and the file <TT>cand.cnd</TT> contains the two lines
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+defsig 0
+defcsig 1
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I>The second row in the output file <TT>000001.cd.000000.dat</TT> of the project <TT>CinderellaNative</TT>
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+30.7091991449662061 3.8506295783390758 3.6090130812823817
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I>using the default sig and csig threshold <!-- MATH
+ $\frac{\pi}{4}\log\mathrm{e}$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img226.png"
+ ALT="$\frac{\pi}{4}\log\mathrm{e}$">, because the comparison dataset does not contain a coincident signal component. The second row in the corresponding file of the project <TT>cand</TT> is
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+30.7091991449662061 4.1917236667995361 2.9501071697428420
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I>Since the default sig is lower in the project <TT>cand</TT>, the resulting conditional sig is higher. On the other hand, the default csig is higher, which causes the resulting conditional csig to drop down.</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2360"
+  HREF="node148.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2356"
+  HREF="node145.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2352"
+  HREF="node146.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2358"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2361"
+  HREF="node148.html">Amplitude transformation</A>
+<B> Up:</B> <A NAME="tex2html2357"
+  HREF="node145.html">Candidate selection</A>
+<B> Previous:</B> <A NAME="tex2html2353"
+  HREF="node146.html">Frequency resolution</A>
+ &nbsp; <B>  <A NAME="tex2html2359"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

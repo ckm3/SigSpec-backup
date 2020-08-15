@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Composed Mode</TITLE>
+<META NAME="description" CONTENT="Composed Mode">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node151.html">
+<LINK REL="previous" HREF="node142.html">
+<LINK REL="up" HREF="node128.html">
+<LINK REL="next" HREF="node150.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2382"
+  HREF="node150.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2378"
+  HREF="node128.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2372"
+  HREF="node148.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2380"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2383"
+  HREF="node150.html">Output for composed mode</A>
+<B> Up:</B> <A NAME="tex2html2379"
+  HREF="node128.html">Cinderella User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2373"
+  HREF="node148.html">Amplitude transformation</A>
+ &nbsp; <B>  <A NAME="tex2html2381"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00380000000000000000"></A><A NAME="CINDERELLA_Composed_Mode"></A>
+<BR>
+Composed Mode
+</H1><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The composed sig is a measure of the probability that two coincident signal components occur in two different datasets. This implements a logical `and', providing an answer to the question, ``What is the probability that two different datasets show coincident signal components with given amplitudes and sigs?''
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The composed mode is useful for, e.g., photometry of the same star in different filters, or if two short datasets of the same object obtained in different years are examined.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Note that the composed sig in the S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> result files (see S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> manual) is consistently defined, but applies to the set of significant signal components displayed in the file, whereas C<SMALL>INDERELLA</SMALL> refers to the composed sig of signal components found in two or more different datasets.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Contrary to the candidate selection procedure in conditional mode (p.<A HREF="node145.html#CINDERELLA_Candidate_selection"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), the frequency interval between the lowest and the highest frequency found in all target datasets is scanned in steps defined by half the frequency resolution (p.<A HREF="node146.html#CINDERELLA_Frequency_resolution"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>). For each of the frequencies under consideration, C<SMALL>INDERELLA</SMALL> computes a composed sig, basically following the introduction by Reegen et al.&nbsp;(2008). Since C<SMALL>INDERELLA</SMALL>'s composed mode takes into account all signal components in all datasets, statistical weights have to be introduced that put more emphasis to signal frequencies closer to the frequency under consideration. Hence the composed sig <!-- MATH
+ $\mathrm{csig}\left( A_n\right)$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img235.png"
+ ALT="$\mathrm{csig}\left( A_n\right)$"> (annotation by Reegen et al.&nbsp;2008) assigned to an arbitrary frequency <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$f$"> is evaluated according to
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\log\left[ 1-10^{\mathrm{csig}\left( A_n\right)}\right] = \frac{1}{N}\sum _{n=1}^{N}\mathrm{e} ^{-\frac{1}{2}\left[\frac{f-f_n}{\min\left(\delta f_n\right)}\right]^2}\log\left[ 1 - 10^{-\mathrm{sig}\,\left( A_n\right)}\right]\: .
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="444" HEIGHT="56" BORDER="0"
+ SRC="img236.png"
+ ALT="\begin{displaymath}
+\log\left[ 1-10^{\mathrm{csig}\left( A_n\right)}\right] = \f...
+...log\left[ 1 - 10^{-\mathrm{sig}\,\left( A_n\right)}\right]\: .
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(34)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+In this context, the total number of signal components in all target datasets is denoted <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$N$">, <IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img237.png"
+ ALT="$f_n$"> referring to the frequency of one of these signal components. The minimum frequency resolution <!-- MATH
+ $\min\left(\delta f_n\right)$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img238.png"
+ ALT="$\min\left(\delta f_n\right)$"> incorporates the definition by Eq.<A HREF="node146.html#CINDERELLA_EQ_fres"><I>3</I></A>.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>An interpolation loop is used to exactly identify the maxima of this composed sig, which are written to the output file.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html2384"
+  HREF="node150.html">Output for composed mode</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2382"
+  HREF="node150.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2378"
+  HREF="node128.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2372"
+  HREF="node148.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2380"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2383"
+  HREF="node150.html">Output for composed mode</A>
+<B> Up:</B> <A NAME="tex2html2379"
+  HREF="node128.html">Cinderella User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2373"
+  HREF="node148.html">Amplitude transformation</A>
+ &nbsp; <B>  <A NAME="tex2html2381"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

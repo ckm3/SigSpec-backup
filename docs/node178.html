@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Order of Input Rows</TITLE>
+<META NAME="description" CONTENT="Order of Input Rows">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node179.html">
+<LINK REL="previous" HREF="node177.html">
+<LINK REL="up" HREF="node167.html">
+<LINK REL="next" HREF="node179.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2764"
+  HREF="node179.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2760"
+  HREF="node167.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2754"
+  HREF="node177.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2762"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2765"
+  HREF="node179.html">Rejecting Unwanted Linear Combinations</A>
+<B> Up:</B> <A NAME="tex2html2761"
+  HREF="node167.html">Combine User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2755"
+  HREF="node177.html">Output</A>
+ &nbsp; <B>  <A NAME="tex2html2763"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00460000000000000000"></A><A NAME="COMBINE_Order_of_Input_Rows"></A>
+<BR>
+Order of Input Rows
+</H1><I></I>
+<P>
+<I><I><I><I>Since C<SMALL>OMBINE</SMALL> processes the input file row by row, the order of rows plays a crucial part in the way the analysis is performed. Changing the order of rows in the input file influences the base upon which the linear combinations are formed. Thus, if there are frequencies previously known to be genuine, it is advisable to ensure that they are on top of the input file, if all further frequencies are supposed to be checked for linear combinations of preferrably these components.
+</I></I></I></I>
+<P>
+<I><I><I><I>
+<BR>
+<BR><B>Example.</B><A NAME="tex2html58"
+  HREF="footnode.html#foot3722"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A> <I>The input of the sample project <TT>order</TT> is essentially the same as for <TT>CombineNative</TT>. Only the order of rows is slightly modified: the 6th signal component of the file <TT>result.dat</TT> in the project <TT>CombineNative</TT>, which refers to the orbit frequency of the MOST spacecraft, appears now on top. This re-ordering forces C<SMALL>OMBINE</SMALL> to consider <!-- MATH
+ $14.188\,\mathrm{d}^{-1}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img263.png"
+ ALT="$14.188\,\mathrm{d}^{-1}$"> genuine. Also the configuration file <TT>result.dat.ini</TT> is the same as for the project <TT>CombineNative</TT>.
+</I></I></I></I></I>
+<P>
+<I><I><I><I><I>Again, there is a base of five genuine frequencies three of which are identical to the project <TT>CombineNative</TT>, namely 5.182, 2.675 and 3.055 cycles per day. The two genuine signal components at 6.722 and 7.193 cycles per day are replaced by 14.188 and 0.0697 cycles per day.</I></I></I></I></I>
+<P>
+<I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2764"
+  HREF="node179.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2760"
+  HREF="node167.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2754"
+  HREF="node177.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2762"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2765"
+  HREF="node179.html">Rejecting Unwanted Linear Combinations</A>
+<B> Up:</B> <A NAME="tex2html2761"
+  HREF="node167.html">Combine User's Manual by</A>
+<B> Previous:</B> <A NAME="tex2html2755"
+  HREF="node177.html">Output</A>
+ &nbsp; <B>  <A NAME="tex2html2763"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

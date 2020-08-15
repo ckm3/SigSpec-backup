@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Accuracy of MultiSine fits</TITLE>
+<META NAME="description" CONTENT="Accuracy of MultiSine fits">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html678"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html674"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html668"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html676"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html679"
+  HREF="node18.html">Program termination</A>
+<B> Up:</B> <A NAME="tex2html675"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html669"
+  HREF="node16.html">Frequency spacing and oversampling</A>
+ &nbsp; <B>  <A NAME="tex2html677"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00249000000000000000"></A><A NAME="SIGSPEC_Accuracy_of_MultiSine_fits"></A>
+<BR>
+Accuracy of MultiSine fits
+</H2><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I>By default, S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> performs a MultiSine least-squares fit each time a new significant signal component is detected. The fitting procedure improves the frequencies, amplitudes, and phases of all previously detected signal components. The algorithm applies Newton's root finding scheme to the first derivatives of the residual variance.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I>The precision of computed frequencies via MultiSine least-sqares fits is defined according to
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\delta f:=\frac{\mu}{T\,\mathrm{sig}^\frac{\kappa}{2}}\: ,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="98" HEIGHT="40" BORDER="0"
+ SRC="img67.png"
+ ALT="\begin{displaymath}
+\delta f:=\frac{\mu}{T\,\mathrm{sig}^\frac{\kappa}{2}}\: ,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+where <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\mu$"> and <IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$\kappa$"> are the accuracy parameters for MultiSine fitting. The default value of <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\mu$"> is <IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.png"
+ ALT="$10^{-6}$">, that of <IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$\kappa$"> is <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$1$">. They may be adjusted by the keyword <TT>multisine:newton</TT><A NAME="SIGSPEC_keyword.multisine:newton"></A>, followed by <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\mu$">, <IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$\kappa$"> and a third parameter determining the relative tolerance of the time-domain rms error between consecutive iterations (see next paragraph). To reduce the potential time consumption of the procedure, <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\mu$"> can be adjusted to achieve an overall scaling of the frequency accuracy. The value of <IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$\kappa$"> determines the dependence of the demanded frequency precision on the sig of the peak under consideration. Setting <IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$\kappa = 0$"> yields the Rayleigh frequency resolution, for <IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$\kappa = 1$"> one obtains the Kallinger resolution (Kallinger, Reegen &amp; Weiss 2008).
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I>The criterion on which MultiSine fitting is based is the minimisation of rms residual. Thus the rms residual is demanded to decrease from one iteration to the next. Otherwise the fitting procedure is terminated. To speed up the computation, the MultiSine fit can be terminated, if the relative improvement of rms residual drops below a positive number. The default value <IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.png"
+ ALT="$10^{-6}$">. This value may be re-adjusted by the third parameter to the keyword <TT>multisine:newton</TT>.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I>The two termination conditions are linked by a logical `and', i.e. the MultiSine fitting procedure stops if both the desired frequency accuracy is reached for all signal components and the improvement of residual rms drops below the specified threshold.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>multisine</TT> illustrates the application of the keyword <TT>multisine:newton</TT> to the IC4996#89 photometry (V) as input file <TT>multisine.dat</TT>. The file <TT>multisine.ini</TT> contains the line
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I></I><PRE>
+multisine 0.001 0 0.01
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>which reduces the accuracy of the MultiSine fit, compared to the default values 0.000001, 1, 0.000001, respectively. The second parameter refers to the Rayleigh frequency resolution rather than the (default) Kallinger frequency resolution. The screen output provides four entries:
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I></I><PRE>
+   1 freq 3.13205  sig 9.54539  rms 0.00449592  csig 9.54539
+   2 freq 3.98472  sig 7.43087  rms 0.00422861  csig 7.42755
+   3 freq 5.40686  sig 5.29838  rms 0.0040257  csig 5.29516
+   4 freq 17.3677  sig 4.13727  rms 0.00388775  csig 4.10809
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>For comparison, the project <TT>SigSpecNative</TT>, p.<A HREF="node6.html#SIGSPEC_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>, employs the default settings.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>For the first entry, there is no difference between the two results, but due to propagation of uncertainties, the following entries show slight and increasing deviations. As expected, the rms errors of residuals are higher if the accuracy is reduced.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html678"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html674"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html668"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html676"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html679"
+  HREF="node18.html">Program termination</A>
+<B> Up:</B> <A NAME="tex2html675"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html669"
+  HREF="node16.html">Frequency spacing and oversampling</A>
+ &nbsp; <B>  <A NAME="tex2html677"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

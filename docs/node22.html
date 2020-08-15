@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Result files</TITLE>
+<META NAME="description" CONTENT="Result files">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html737"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html733"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html729"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html735"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html738"
+  HREF="node23.html">Analysis of the Time-domain</A>
+<B> Up:</B> <A NAME="tex2html734"
+  HREF="node19.html">Default Output</A>
+<B> Previous:</B> <A NAME="tex2html730"
+  HREF="node21.html">Residual time series</A>
+ &nbsp; <B>  <A NAME="tex2html736"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00253000000000000000"></A><A NAME="SIGSPEC_Result_files"></A>
+<BR>
+Result files
+</H2><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The file <TT>result.dat</TT> contains a list of all identified sig maxima. This file consists of seven columns providing
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<OL>
+<LI>frequency [inverse time units],
+</LI>
+<LI>sig,
+</LI>
+<LI>amplitude [units of observable],
+</LI>
+<LI>phase [rad],
+</LI>
+<LI>rms scatter of the time series before prewhitening,
+</LI>
+<LI>point-to-point scatter of the time series before prewhitening,
+</LI>
+<LI>the cumulative sig for all frequency components detected so far.
+</LI>
+</OL><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>Columns 3 and 4 represent amplitude and phase as the result of a least-squares fit to the time series at the present prewhitening stage (i.e.&nbsp;after subtraction of all previously identified signal components) for the frequency of maximum significance.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The last line in the file contains zeroes for frequency, amplitude, and phase. The non-zero values refer to the (cumulative) sig of the most significant component below the threshold, and to the rms and point-to-point scatter after the last prewhitening step, respectively. This final line is suppressed if the criterion <TT>iterations</TT> is responsible for program termination.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>If the keyword <TT>results</TT><A NAME="SIGSPEC_keyword.results"></A> is provided in the <TT>.ini</TT> file, additional result files <TT>r#iteration#.dat</TT> are generated, where the index <TT>#iteration#</TT> starts with <TT>000001</TT>, denoting the result of the first iteration. The files contain the significant components within the prewhitening cascade as preliminary results. The MultiSine least-squares fits which are performed at each step of the prewhitening sequence modify frequencies, amplitudes and phases. Therefore it may be useful to have additional results from earlier iterations in hands, if the user decides not to use all components found by S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> without re-running the program.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>The keyword <TT>results</TT> expects two integer parameters. The first defines the number of iterations for which these files shall be generated. A negative number causes S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> to generate files for all iterations. The second parameter has to be a positive number and defines a step width. If it is set <TT>1</TT>, a result file is generated after each iteration, if it is set <TT>2</TT>, after every second iteration (starting with <TT>r000002.dat</TT>), and so on.
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>output</TT> uses the keyword <TT>results</TT> in the file <TT>output.ini</TT>, namely
+</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I><I></I><PRE>
+results -1 1
+</PRE><I></I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I>providing result files <TT>r000001.dat</TT>, <TT>r000002.dat</TT>,..., for all iterations of the entire prewhitening sequence. In addition, the final result after all prewhitening iterations is contained in the file <TT>results.dat</TT>.</I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I></I>
+<P>
+<I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html737"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html733"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html729"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html735"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html738"
+  HREF="node23.html">Analysis of the Time-domain</A>
+<B> Up:</B> <A NAME="tex2html734"
+  HREF="node19.html">Default Output</A>
+<B> Previous:</B> <A NAME="tex2html730"
+  HREF="node21.html">Residual time series</A>
+ &nbsp; <B>  <A NAME="tex2html736"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

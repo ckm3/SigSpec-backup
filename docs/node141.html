@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Default type</TITLE>
+<META NAME="description" CONTENT="Default type">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="previous" HREF="node140.html">
+<LINK REL="up" HREF="node137.html">
+<LINK REL="next" HREF="node142.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2284"
+  HREF="node142.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2280"
+  HREF="node137.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2276"
+  HREF="node140.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2282"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2285"
+  HREF="node142.html">Conditional Mode</A>
+<B> Up:</B> <A NAME="tex2html2281"
+  HREF="node137.html">Dataset Types</A>
+<B> Previous:</B> <A NAME="tex2html2277"
+  HREF="node140.html">Datasets to ignore</A>
+ &nbsp; <B>  <A NAME="tex2html2283"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00364000000000000000"></A><A NAME="CINDERELLA_Default_type"></A>
+<BR>
+Default type
+</H2><I></I>
+<P>
+<I><I><I><I>To enhance the convenience for the user, not all files need to be specified by the keywords <TT>target</TT>, <TT>comp</TT> and <TT>skip</TT>. The keyword <TT>deftype</TT><A NAME="CINDERELLA_keyword.deftype"></A> may be used to assign a default dataset type.
+</I></I></I></I>
+<OL>
+<LI>Use <TT>deftype target</TT> to assign the target attribute by default. If no <TT>deftype</TT> keyword is provided, this setting is activated.
+</LI>
+<LI>Use <TT>deftype comp</TT> to assign the comp attribute by default.
+</LI>
+<LI>Use <TT>deftype skip</TT> to assign the skip attribute by default.
+</LI>
+</OL><I></I>
+<P>
+<I><I><I><I>
+<BR>
+<BR><B>Example.</B> <I>The sample project <TT>types</TT> contains the same input as the project <TT>CinderellaNative</TT> (p.<A HREF="node134.html#CINDERELLA_EXnormalrun"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>), and the file <TT>types.cnd</TT> contains the two lines
+</I></I></I></I></I>
+<P>
+<I><I><I></I><PRE>
+deftype target
+comp 0
+</PRE><I></I><I><I>
+<P>
+<I><I><I><I><I>This reproduces the default assignment of data types, and C<SMALL>INDERELLA</SMALL> performs the same calculations as for the project <TT>CinderellaNative</TT>. The only difference is the screen output:
+</I></I></I></I></I>
+<P>
+<I><I><I></I><PRE>
+*** dataset type assignment ********************************
+
+000000.types.dat: comparison
+000001.types.dat: target
+000002.types.dat: target
+000003.types.dat: target
+000004.types.dat: target
+000005.types.dat: target
+000006.types.dat: target
+000007.types.dat: target
+000008.types.dat: target
+</PRE><I></I><I><I>
+<P>
+<I><I><I><I><I>The fact that <TT>(default)</TT> is not attached to the file list indicates that C<SMALL>INDERELLA</SMALL> uses the specifications given in the file <TT>types.cnd</TT> rather than the standard settings applied to the project <TT>CinderellaNative</TT>.</I></I></I></I></I>
+<P>
+<I><I><I></I><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2284"
+  HREF="node142.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2280"
+  HREF="node137.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2276"
+  HREF="node140.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2282"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2285"
+  HREF="node142.html">Conditional Mode</A>
+<B> Up:</B> <A NAME="tex2html2281"
+  HREF="node137.html">Dataset Types</A>
+<B> Previous:</B> <A NAME="tex2html2277"
+  HREF="node140.html">Datasets to ignore</A>
+ &nbsp; <B>  <A NAME="tex2html2283"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>

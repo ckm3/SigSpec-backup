@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The .ini file</TITLE>
+<META NAME="description" CONTENT="The .ini file">
+<META NAME="keywords" CONTENT="3Manuals">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="3Manuals.css">
+
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html594"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html590"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html584"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html592"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html595"
+  HREF="node11.html">Time series columns representing</A>
+<B> Up:</B> <A NAME="tex2html591"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html585"
+  HREF="node9.html">The time series input</A>
+ &nbsp; <B>  <A NAME="tex2html593"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00242000000000000000"></A><A NAME="SIGSPEC_The_.ini_file"></A>
+<BR>
+The <TT>.ini</TT> file
+</H2>
+<P>
+<I><I>An optional file <TT>&lt;project&gt;.ini</TT> consists of a set of keywords and arguments defining project-specific parameters for S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL>. If this file is not present in the same folder as the time series input file(s), S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> uses a set of default parameters. A complete list of keywords is given in ``Keywords Reference'', p.<A HREF="node55.html#SIGSPEC_Keywords_Reference"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>.
+</I></I>
+<P>
+<I><I>Multiple use of the same keyword or the specification of contradictory keywords causes the software to take into account only the last declaration. There are only three exceptions:
+</I></I>
+<P>
+<OL>
+<LI>S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> accepts multiple weights columns specified by <TT>col:weights</TT> (p.<A HREF="node12.html#SIGSPEC_Time_series_columns_containing_statistical_weights"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>),
+</LI>
+<LI>multiple subset identifier columns may be specified by <TT>col:ssid</TT> (p.<A HREF="node13.html#SIGSPEC_Time_series_columns_containing_subset_identifiers"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>),
+</LI>
+<LI>the simulator may be used to synthesize multiperiodic signal plus various types of noise upon the given sampling, where the keywords <TT>sim:signal</TT>, <TT>sim:poly</TT>, <TT>sim:exp</TT>, <TT>sim:zeromean</TT>, <TT>sim:serial</TT>, <TT>sim:temporal</TT>, and <TT>sim:rndsteps</TT> may be used multiply (see ``The simulator mode'', p.<A HREF="node40.html#SIGSPEC_The_simulator_mode"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>).
+</LI>
+</OL>
+<P>
+<I><I>
+<BR>
+<BR>
+<B>Caution: S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL> expects a carriage-return character at the end of the file <TT>&lt;project&gt;.ini</TT>, otherwise the program may hang!</B>
+<BR>
+<BR>
+</I></I>
+<P>
+<I><I>Lines in the <TT>.ini</TT> file starting with a <TT>#</TT> character are ignored by S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL>. This provides the possibility to write comments into the file. Furthermore, additional characters beyond what is expected in a line (keyword plus required number of parameters) is ignored. Thus it is allowed to add comments also at the end of the lines containing relevant information for S<SMALL>IG</SMALL>S<SMALL>PEC</SMALL>.
+</I></I>
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html594"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html590"
+  HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html584"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html592"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html595"
+  HREF="node11.html">Time series columns representing</A>
+<B> Up:</B> <A NAME="tex2html591"
+  HREF="node8.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html585"
+  HREF="node9.html">The time series input</A>
+ &nbsp; <B>  <A NAME="tex2html593"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Piet Reegen
+2009-09-23
+</ADDRESS>
+</BODY>
+</HTML>
